@@ -30,7 +30,7 @@ public class BrickManager : MonoBehaviour
 
 
 
-        if (other.gameObject.tag == "Spike")
+        if (other.gameObject.tag == "Player")
         {
 
             Collapse();
