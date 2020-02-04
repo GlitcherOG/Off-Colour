@@ -25,10 +25,7 @@ public class WallManager : MonoBehaviour
     void Update()
     {
         
-        if (HealthBar.value != curHealth/maxHealth)
-        {
-            HealthBar.value = curHealth;
-        }
+        
         if(curHealth <= 0f)
         {
 

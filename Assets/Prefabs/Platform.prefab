@@ -53,10 +53,8 @@ MonoBehaviour:
   curHealth: 0
   repair: 0
   material: 0
-  self: {fileID: 0}
+  self: {fileID: 5528090437334466187}
   collapse: 0
-  HealthBar: {fileID: 0}
-  audio: {fileID: 0}
 --- !u!1001 &111442540654913985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,6 +122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 8745525761529321822}
     - target: {fileID: 5141368528159556769, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -204,6 +207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 8745525761529321822}
     - target: {fileID: 5141368528159556769, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -284,6 +292,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 8745525761529321822}
     - target: {fileID: 5141368528159556769, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -364,6 +377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 8745525761529321822}
     - target: {fileID: 5141368528159556769, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -444,6 +462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 8745525761529321822}
     - target: {fileID: 5141368528159556769, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -524,6 +547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 8745525761529321822}
     - target: {fileID: 5141368528159556769, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall

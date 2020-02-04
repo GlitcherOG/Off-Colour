@@ -8,31 +8,29 @@ public class BrickManager : MonoBehaviour
     public Rigidbody2D rigid;
     public WallManager wall;
     public bool intact = true;
-    Vector2 oldPos;
-    public Quaternion originalRotationValue;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        oldPos = transform.position;
-        originalRotationValue = gameObject.transform.rotation;
+        
 
     }
     public void Collapse()
     {
 
-        transform.Translate(0, 1);
-        rigid.constraints = RigidBody2Dconstraints.none;
+        
+        rigid.constraints = RigidbodyConstraints2D.None;
         intact = false;
 
     }
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter2D(Collision2D other)
     {
 
 
 
 
-        if (other.tag == "Spike")
+        if (other.gameObject.tag == "Spike")
         {
 
             Collapse();
@@ -48,13 +46,6 @@ public class BrickManager : MonoBehaviour
     void Update()
     {
         
-        if (wall.collapse == false && intact == false)
-        {
-            intact = true;
-            transform.rotation = originalRotationValue;
-            transform.position = oldPos;
-            rigid.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationZ;
-
-        }
+      
     }
 }
