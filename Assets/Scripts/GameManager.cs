@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         TogglePause();
     }
+    public GameObject SettingsGO;
+    public int score = 0;
     public bool gameEnded = false;
     public bool isPaused = false;
     public GameObject _pauseMenu;
@@ -31,6 +33,14 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
             _pauseMenu.SetActive(true);
             isPaused = true;
+        }
+        if (Setting.SettingsOpen)
+        {
+            SettingsGO.SetActive(true);
+        }
+        else if (!Setting.SettingsOpen)
+        {
+            SettingsGO.SetActive(false);
         }
     }
     public void TogglePause()
@@ -93,6 +103,22 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(levelID);
     }
+    public void OpenSettings()
+    {
+
+        /*/switch (MenuSelect)
+        {
+            case menuSelect.Play:
+                break;
+            case
+            /*/
+
+        Setting.SettingsOpen = !Setting.SettingsOpen;
+
+
+    }
+    //create an update function that make SettingsGO option switch between active and inactive based on whether SettingsOpen is true or false
+    
     //create a function to quite the game by unityEditor isPlaying false and calling a inbuilt function to make the application quit
     public void QuitGame()
     {
