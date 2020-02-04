@@ -11,7 +11,7 @@ public class PlayerHandler : MonoBehaviour
     public GameObject Camera;
     public GameObject CameraLocation;
     public Text debug;
-    public float maxHealth, curHealth;
+    public static float maxHealth, curHealth;
     public Slider healthBar;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,7 @@ public class PlayerHandler : MonoBehaviour
             
 
         }
+        
 
 
 
