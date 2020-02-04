@@ -104,7 +104,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (IsGrounded)
         {
-            Rigidbody.AddForce(new Vector2(0f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
+            Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
         }
     }
     
