@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BrickManager : MonoBehaviour
+public class DoorManager : MonoBehaviour
 {
     public Rigidbody2D rigid;
-    
+   
     public bool intact = true;
     public GameObject self;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
 
     }
     public void Collapse()
@@ -23,7 +23,6 @@ public class BrickManager : MonoBehaviour
         rigid.constraints = RigidbodyConstraints2D.None;
         intact = false;
 
-
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -31,7 +30,7 @@ public class BrickManager : MonoBehaviour
 
 
 
-        if (other.gameObject.tag == "Spike")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Spike")
         {
 
             Collapse();
@@ -46,7 +45,7 @@ public class BrickManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-      
+
+
     }
 }
