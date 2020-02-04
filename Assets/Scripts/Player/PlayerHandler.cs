@@ -11,15 +11,44 @@ public class PlayerHandler : MonoBehaviour
     public GameObject Camera;
     public GameObject CameraLocation;
     public Text debug;
+    public float maxHealth, curHealth;
+    public Slider healthBar;
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxHealth = 3;
+        curHealth = maxHealth;
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
 
+
+
+
+        if (other.gameObject.tag == "DangerZone")
+        {
+            curHealth -= 1;
+            
+
+        }
+
+
+
+
+
+    }
     // Update is called once per frame
     void Update()
     {
+        if (healthBar.value != curHealth/maxHealth)
+        {
+            healthBar.value = curHealth / maxHealth;
+        }
+        if (curHealth == 0)
+        {
+            GameManager.isDead = true;
+        }
+        
         controller.Move(speed);
         if (Input.GetKeyDown("space"))
         {
