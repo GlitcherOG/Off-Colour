@@ -107,6 +107,10 @@ public class CharacterController2D : MonoBehaviour
             Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
         }
     }
+    public void Magic()
+    {
+        PlayerHandler.curMana -= 0;
+    }
     
 
     public void Move(float offsetX)

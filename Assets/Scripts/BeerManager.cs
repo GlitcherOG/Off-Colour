@@ -11,7 +11,7 @@ public class BeerManager : MonoBehaviour
     {
 
         
-        if (other.tag == "Player" )
+        if (other.tag == "Player" && PlayerHandler.curHealth != PlayerHandler.maxHealth)
         {
             PlayerHandler.curHealth += 1;
             Destroy(self.gameObject);
