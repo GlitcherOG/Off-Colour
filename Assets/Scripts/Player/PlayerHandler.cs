@@ -17,7 +17,7 @@ public class PlayerHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time = 0;
+        Timer = 0;
         maxHealth = 3;
         curHealth = maxHealth;
     }
@@ -27,7 +27,7 @@ public class PlayerHandler : MonoBehaviour
 
 
 
-        if (other.gameObject.tag == "DangerZone" && Time <= 0)
+        if (other.gameObject.tag == "DangerZone" && Timer <= 0)
         {
             curHealth -= 1;
             
@@ -45,11 +45,11 @@ public class PlayerHandler : MonoBehaviour
     {
         if (Timer <= 0)
         {
-            Timer -= Time.deltatime;
+            //Timer -= Time.deltatime;
         }
         if (Warper <= 0)
         {
-            Warper -= Time.deltatime;
+            //Warper -= Time.deltatime;
         }
         else
         {
