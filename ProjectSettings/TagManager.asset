@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Spike
   - DangerZone
+  - Undefined
+  - Platform
   layers:
   - Default
   - TransparentFX
