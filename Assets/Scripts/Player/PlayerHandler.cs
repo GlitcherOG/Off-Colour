@@ -13,9 +13,11 @@ public class PlayerHandler : MonoBehaviour
     public Text debug;
     public static float maxHealth, curHealth;
     public Slider healthBar;
+    public static float Timer,Warper; 
     // Start is called before the first frame update
     void Start()
     {
+        Time = 0;
         maxHealth = 3;
         curHealth = maxHealth;
     }
@@ -25,7 +27,7 @@ public class PlayerHandler : MonoBehaviour
 
 
 
-        if (other.gameObject.tag == "DangerZone")
+        if (other.gameObject.tag == "DangerZone" && Time <= 0)
         {
             curHealth -= 1;
             
@@ -41,6 +43,18 @@ public class PlayerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Timer <= 0)
+        {
+            Timer -= Time.deltatime;
+        }
+        if (Warper <= 0)
+        {
+            Warper -= Time.deltatime;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
         if (healthBar.value != curHealth/maxHealth)
         {
             healthBar.value = curHealth / maxHealth;
