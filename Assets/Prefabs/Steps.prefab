@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 0
+  cooldown: 50
 --- !u!1001 &4512765309734615281
 PrefabInstance:
   m_ObjectHideFlags: 0

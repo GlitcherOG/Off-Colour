@@ -3115,6 +3115,7 @@ GameObject:
   - component: {fileID: -7493343873997342879}
   - component: {fileID: 9081499984073922845}
   - component: {fileID: -8153068241633864911}
+  - component: {fileID: 8858755638030270908}
   m_Layer: 0
   m_Name: PlatformGround
   m_TagString: Untagged
@@ -3201,6 +3202,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8858755638030270908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007929826543443825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac189d8fc5e0333479f9eececec69ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  y: 0
+  cooldown: 100
 --- !u!1 &5177454395835648399
 GameObject:
   m_ObjectHideFlags: 0

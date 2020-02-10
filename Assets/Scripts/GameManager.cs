@@ -6,16 +6,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
-
-
     public void Start()
     {
         isPaused = true;
         TogglePause();
     }
     public GameObject SettingsGO;
-    public int score = 0;
     public bool gameEnded = false;
     public bool isPaused = false;
     public GameObject _pauseMenu;

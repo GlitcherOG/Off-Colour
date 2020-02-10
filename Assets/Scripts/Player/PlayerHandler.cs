@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,6 @@ public class PlayerHandler : MonoBehaviour
     public float jump = 10f;
     public GameObject Camera;
     public GameObject CameraLocation;
-    public Text debug;
     public static float maxHealth, curHealth, maxMana, curMana;
     public Slider healthBar, magicBar;
     public static float Timer,Warper, Blaster;
@@ -26,22 +26,10 @@ public class PlayerHandler : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-
-
-
-
-        if (other.gameObject.tag == "DangerZone" && Timer <= 0)
+        if (other.gameObject.CompareTag("DangerZone") && Timer <= 0)
         {
             curHealth -= 1;
-            
-
         }
-        
-
-
-
-
-
     }
     // Update is called once per frame
     void Update()
@@ -92,6 +80,7 @@ public class PlayerHandler : MonoBehaviour
 
         }
         Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
-        debug.text = transform.position.x.ToString();
+        float temp = gameObject.transform.position.x/10;
+        ScoreManager.distance = (float)Math.Round(temp);
     }
 }
