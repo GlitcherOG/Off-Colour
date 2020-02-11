@@ -5,7 +5,7 @@ using UnityEngine;
 public class PrefabModule : MonoBehaviour
 {
     public float y;
-    public float cooldown;
+    public float cooldown = 1f;
     // Start is called before the first frame update
     void Start()
     {
