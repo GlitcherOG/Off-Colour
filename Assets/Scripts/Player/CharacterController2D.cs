@@ -109,7 +109,7 @@ public class CharacterController2D : MonoBehaviour
     }
     public void Magic()
     {
-        if (Blaster >= 0)
+        if (PlayerHandler.Blaster >= 0)
         {
             PlayerHandler.curMana -= 1;
         }
