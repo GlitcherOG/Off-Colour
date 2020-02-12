@@ -18,7 +18,7 @@ public class CharacterController2D : MonoBehaviour
     
     [Header("Events")]
     public UnityEvent OnLandEvent; //Unity event for when the character lands
-
+    public GameObject leftBullet, rightBullet;
     public bool IsGrounded; //Is the character grounded
     public bool IsFrontBlocked { get; private set; } //Is the front of the character blocked
     public bool IsFacingRight { get; private set; } = true; //Is the character facing right
@@ -109,7 +109,19 @@ public class CharacterController2D : MonoBehaviour
     }
     public void Magic()
     {
-        PlayerHandler.curMana -= 1;
+        if (Blaster >= 0)
+        {
+            PlayerHandler.curMana -= 1;
+        }
+        
+        if (IsFacingRight == true)
+        {
+            Instantiate(rightBullet);
+        }
+        else
+        {
+            Instantiate(leftBullet);
+        }
     }
     
 

@@ -44,14 +44,15 @@ public class PlayerHandler : MonoBehaviour
         {
             Warper -= Time.deltaTime;
         }
+        if (Time.timeScale == 0.25f && Warper <= 0)
+        {
+            Time.timeScale = 1f;
+        }
         if (Blaster >= 0)
         {
             Blaster -= Time.deltaTime;
         }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+       
         if (healthBar.value != curHealth/maxHealth)
         {
             healthBar.value = curHealth / maxHealth;
@@ -71,7 +72,7 @@ public class PlayerHandler : MonoBehaviour
         {
             controller.Jump(jump);
         }
-        if (curMana <= 0)
+        if (curMana <= 0 || Blaster <= 0)
         {
             CanCast = false;
         }
