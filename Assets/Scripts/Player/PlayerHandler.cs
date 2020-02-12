@@ -13,12 +13,14 @@ public class PlayerHandler : MonoBehaviour
     public GameObject CameraLocation;
     public static float maxHealth, curHealth, maxMana, curMana;
     public Slider healthBar, magicBar;
-    public static float Timer,Warper, Blaster;
+    public static float Ghoster,Warper, Blaster;
     public static bool CanCast;
     // Start is called before the first frame update
     void Start()
     {
-        Timer = 0;
+        Ghoster = 0;
+        Warper = 0;
+        Blaster = 0;
         maxHealth = 3;
         maxMana = 3;
         curHealth = maxHealth;
@@ -26,7 +28,7 @@ public class PlayerHandler : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("DangerZone") && Timer <= 0)
+        if (other.gameObject.CompareTag("DangerZone") && Ghoster <= 0)
         {
             curHealth -= 1;
         }
@@ -34,13 +36,17 @@ public class PlayerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Timer <= 0)
+        if (Ghoster >= 0)
         {
-            //Timer -= Time.deltatime;
+            Ghoster -= Time.deltaTime;
         }
-        if (Warper <= 0)
+        if (Warper >= 0)
         {
-           // Warper -= Time.deltatime;
+            Warper -= Time.deltaTime;
+        }
+        if (Blaster >= 0)
+        {
+            Blaster -= Time.deltaTime;
         }
         else
         {

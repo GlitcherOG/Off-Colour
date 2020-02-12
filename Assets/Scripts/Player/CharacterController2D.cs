@@ -109,7 +109,7 @@ public class CharacterController2D : MonoBehaviour
     }
     public void Magic()
     {
-        PlayerHandler.curMana -= 0;
+        PlayerHandler.curMana -= 1;
     }
     
 
