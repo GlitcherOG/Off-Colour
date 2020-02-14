@@ -35,7 +35,7 @@ AnimatorStateMachine:
     m_Position: {x: 700, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2775914515739162664}
-    m_Position: {x: 480, y: 80, z: 0}
+    m_Position: {x: 490, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4663607415925670002}
     m_Position: {x: 790, y: 60, z: 0}
@@ -142,7 +142,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.14224356
   m_TransitionOffset: 0
   m_ExitTime: 0.25
   m_HasExitTime: 0
@@ -519,7 +519,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 5b53683a67609734ebd9c5a5bd4c9571, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -542,7 +542,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.13304484
   m_TransitionOffset: 0
   m_ExitTime: 0.25
   m_HasExitTime: 0
@@ -561,15 +561,18 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Glide
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Grounded
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2775914515739162664}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.11615379
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.46076918
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -622,7 +625,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 3f4b98d2fd8640241bc56c97125f8913, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

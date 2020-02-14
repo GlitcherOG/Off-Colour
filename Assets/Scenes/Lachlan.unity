@@ -676,6 +676,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8263664447878967523}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1670744268
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670744267}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12, y: 0}
+  m_Size: {x: 0.38, y: 0.63}
+  m_Direction: 0
 --- !u!4 &1715244806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4040031701256102866, guid: 1c57e5a147d448946b24d6088cba421f,
@@ -947,7 +963,6 @@ MonoBehaviour:
   obsitcles:
   - {fileID: 8417994018883901263, guid: 37fa99e40ba47024997f7c23095cea38, type: 3}
   - {fileID: 8037545007849854773, guid: 40fe7cdcf765cd245b5ac1244ac236f9, type: 3}
-  - {fileID: 5007929826543443825, guid: 999eb6af0fd16f141a68911331850f88, type: 3}
   platform: {fileID: 6271820306426554632, guid: 1c57e5a147d448946b24d6088cba421f,
     type: 3}
   powerUps: []
@@ -1109,6 +1124,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8263664447204237988, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.343
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263664447204237988, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.123
+      objectReference: {fileID: 0}
     - target: {fileID: 8263664447316047912, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}
       propertyPath: m_Name
@@ -1122,7 +1147,7 @@ PrefabInstance:
     - target: {fileID: 8263664447316047916, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 8263664447316047916, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}
@@ -1169,6 +1194,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8263664447316047917, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8204335442217980708, guid: ea2244189d9fa194b8d31d2141881a0b,
+        type: 3}
     - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}
       propertyPath: Camera
@@ -1184,5 +1215,11 @@ PrefabInstance:
       propertyPath: magicBar
       value: 
       objectReference: {fileID: 764470212}
-    m_RemovedComponents: []
+    - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: jump
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8263664447316047918, guid: 64f3f4961029acc48800d6297689e234, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 64f3f4961029acc48800d6297689e234, type: 3}

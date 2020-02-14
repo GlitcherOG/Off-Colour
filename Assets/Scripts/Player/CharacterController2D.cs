@@ -27,11 +27,11 @@ public class CharacterController2D : MonoBehaviour
     public bool doubleJump = true;
     public bool HasParameter(string paramName, Animator animator)
     {
-        //foreach (AnimatorControllerParameter param in animator.parameters)
-        //{
-        //    if (param.name == paramName)
-        //        return true;
-        //}
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.name == paramName)
+                return true;
+        }
         return false;
     }
 
@@ -97,8 +97,6 @@ public class CharacterController2D : MonoBehaviour
         if(HasParameter("Grounded", Anim))
             Anim.SetBool("Grounded", IsGrounded);
         //If JumpY Exist set animation to the float of Rigidbodys vertical velocity 
-        if (HasParameter("Jump", Anim))
-            Anim.SetTrigger("Jump");
     }
     
     //When jump is trigged

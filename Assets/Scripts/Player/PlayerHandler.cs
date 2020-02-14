@@ -61,7 +61,6 @@ public class PlayerHandler : MonoBehaviour
         if (magicBar.value != curMana / maxMana)
         {
             magicBar.value = curMana / maxMana;
-            
         }
         if (curHealth == 0)
         {
@@ -87,7 +86,6 @@ public class PlayerHandler : MonoBehaviour
         {
             controller.Magic();
             anim.SetTrigger("Spell");
-
         }
         Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
         float temp = gameObject.transform.position.x/10;
