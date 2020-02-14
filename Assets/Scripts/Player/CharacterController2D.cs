@@ -24,7 +24,7 @@ public class CharacterController2D : MonoBehaviour
     public bool IsFacingRight { get; private set; } = true; //Is the character facing right
     public Rigidbody2D Rigidbody { get; private set; } //Character rigidbody
     public Animator Anim { get; private set; } //Character animatior
-
+    public bool doubleJump = true;
     public bool HasParameter(string paramName, Animator animator)
     {
         //foreach (AnimatorControllerParameter param in animator.parameters)
@@ -69,6 +69,8 @@ public class CharacterController2D : MonoBehaviour
             {
                 //Set IsGrounded to true
                 IsGrounded = true;
+                doubleJump = true;
+                Anim.SetBool("Glide", false);
                 //If wasGrounded was false 
                 if (!wasGrounded)
                     //Invoke OnLandEvent
@@ -92,11 +94,11 @@ public class CharacterController2D : MonoBehaviour
     private void AnimateDefault()
     {
         //If IsGrounded Exist set animation to the state of IsGrounded
-        if(HasParameter("IsGrounded", Anim))
-            Anim.SetBool("IsGrounded", IsGrounded);
+        if(HasParameter("Grounded", Anim))
+            Anim.SetBool("Grounded", IsGrounded);
         //If JumpY Exist set animation to the float of Rigidbodys vertical velocity 
-        if (HasParameter("JumpY", Anim))
-            Anim.SetFloat("JumpY", Rigidbody.velocity.y);
+        if (HasParameter("Jump", Anim))
+            Anim.SetTrigger("Jump");
     }
     
     //When jump is trigged
@@ -105,7 +107,19 @@ public class CharacterController2D : MonoBehaviour
         if (IsGrounded)
         {
             Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
+            Anim.SetTrigger("Jump");
         }
+        if (doubleJump == true)
+        {
+            Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
+            doubleJump = false;
+            Anim.SetTrigger("Jump");
+        }
+        else
+        {
+            Anim.SetBool("Glide", true);
+        }
+
     }
     public void Magic()
     {
@@ -128,9 +142,9 @@ public class CharacterController2D : MonoBehaviour
     public void Move(float offsetX)
     {
         //If Animator has parameter IsRuunning
-        if (HasParameter("IsRunning", Anim))
+        //if (HasParameter("IsRunning", Anim))
             //Set Bool for IsRUnning 
-            Anim.SetBool("IsRunning", offsetX != 0);
+            //Anim.SetBool("IsRunning", offsetX != 0);
         //If IsGrounded is true as well as AirControl
         if (IsGrounded || m_AirControl)
         {

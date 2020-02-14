@@ -15,6 +15,7 @@ public class PlayerHandler : MonoBehaviour
     public Slider healthBar, magicBar;
     public static float Ghoster,Warper, Blaster;
     public static bool CanCast;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +72,7 @@ public class PlayerHandler : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             controller.Jump(jump);
+            
         }
         if (curMana <= 0 || Blaster <= 0)
         {
@@ -84,6 +86,7 @@ public class PlayerHandler : MonoBehaviour
         if (Input.GetKeyDown("e") && CanCast == true)
         {
             controller.Magic();
+            anim.SetTrigger("Spell");
 
         }
         Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
