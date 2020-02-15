@@ -128,18 +128,17 @@ public class CharacterController2D : MonoBehaviour
     //When jump is trigged
     public void Jump(float height)
     {
-        if (!IsGrounded && doubleJump && airTesting)
+        if (!IsGrounded && doubleJump && !airTesting)
         {
             Debug.Log("DJump");
             Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
-            doubleJump = false;
+            airTesting = true;
             Anim.SetTrigger("Double Jump");
         }
         else
         if (IsGrounded && !airTesting)
         {
             IsGrounded = false;
-            airTesting = true;
             Debug.Log(airTesting);
             Debug.Log("Jump");
             Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
