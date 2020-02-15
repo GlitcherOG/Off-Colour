@@ -24,7 +24,10 @@ public class CharacterController2D : MonoBehaviour
     public bool IsFacingRight { get; private set; } = true; //Is the character facing right
     public Rigidbody2D Rigidbody { get; private set; } //Character rigidbody
     public Animator Anim { get; private set; } //Character animatior
+
+    [Header("Abilites")]
     public bool doubleJump = true;
+    public bool airTesting;
     public bool HasParameter(string paramName, Animator animator)
     {
         foreach (AnimatorControllerParameter param in animator.parameters)
@@ -48,6 +51,20 @@ public class CharacterController2D : MonoBehaviour
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(m_GroundCheck.position, m_GroundedRadius);
+        Gizmos.DrawWireSphere(m_FrontCheck.position, m_FrontCheckRadius);
+        Ray groundRay = new Ray(transform.position, Vector3.down);
+        Gizmos.DrawLine(groundRay.origin, groundRay.origin + groundRay.direction * m_GroundRayLength);
+
+
+
+        //Gizmos.color = Color.red;
+        //Ray ladderRay = new Ray(m_LadderCheck.position, Vector3.up);
+        //Gizmos.DrawLine(ladderRay.origin, ladderRay.origin + ladderRay.direction * m_LadderRayLength);
+    }
 
     private void FixedUpdate()
     {
@@ -69,7 +86,6 @@ public class CharacterController2D : MonoBehaviour
             {
                 //Set IsGrounded to true
                 IsGrounded = true;
-                doubleJump = true;
                 Anim.SetBool("Glide", false);
                 //If wasGrounded was false 
                 if (!wasGrounded)
@@ -89,28 +105,44 @@ public class CharacterController2D : MonoBehaviour
                 IsFrontBlocked = true;
             }
         }
+
     }
+
     //Default set of animations
     private void AnimateDefault()
     {
         //If IsGrounded Exist set animation to the state of IsGrounded
-        if(HasParameter("Grounded", Anim))
+        if (HasParameter("Grounded", Anim))
             Anim.SetBool("Grounded", IsGrounded);
         //If JumpY Exist set animation to the float of Rigidbodys vertical velocity 
+    }
+
+    public void Landed()
+    {
+        if (IsGrounded)
+        {
+            airTesting = false;
+        }
     }
     
     //When jump is trigged
     public void Jump(float height)
     {
-        if (IsGrounded)
+        if (!IsGrounded && doubleJump && airTesting)
         {
-            Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
-            Anim.SetTrigger("Jump");
-        }
-        if (doubleJump == true)
-        {
+            Debug.Log("DJump");
             Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
             doubleJump = false;
+            Anim.SetTrigger("Double Jump");
+        }
+        else
+        if (IsGrounded && !airTesting)
+        {
+            IsGrounded = false;
+            airTesting = true;
+            Debug.Log(airTesting);
+            Debug.Log("Jump");
+            Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
             Anim.SetTrigger("Jump");
         }
         else

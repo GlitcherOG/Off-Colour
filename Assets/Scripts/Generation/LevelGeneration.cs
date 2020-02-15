@@ -10,7 +10,7 @@ public class LevelGeneration : MonoBehaviour
     public GameObject[] powerUps;
     public float spawnCoolDown = 20f;
     public float objectCoolDown = 20f;
-
+    public bool debug;
     private void Start()
     {
 
@@ -23,7 +23,7 @@ public class LevelGeneration : MonoBehaviour
             spawnCoolDown += 50;
             SpawnGround();
         }
-        if (objectCoolDown <= Player.transform.position.x)
+        if (objectCoolDown <= Player.transform.position.x && debug)
         {
             SpawnObsitcles();
         }

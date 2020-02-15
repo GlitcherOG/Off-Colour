@@ -9,11 +9,12 @@ public class PlayerHandler : MonoBehaviour
     public CharacterController2D controller;
     public float speed = 20f;
     public float jump = 10f;
+    public bool run;
     public GameObject Camera;
     public GameObject CameraLocation;
     public static float maxHealth, curHealth, maxMana, curMana;
     public Slider healthBar, magicBar;
-    public static float Ghoster,Warper, Blaster;
+    public static float Ghoster, Warper, Blaster;
     public static bool CanCast;
     public Animator anim;
     // Start is called before the first frame update
@@ -53,8 +54,8 @@ public class PlayerHandler : MonoBehaviour
         {
             Blaster -= Time.deltaTime;
         }
-       
-        if (healthBar.value != curHealth/maxHealth)
+
+        if (healthBar.value != curHealth / maxHealth)
         {
             healthBar.value = curHealth / maxHealth;
         }
@@ -66,13 +67,6 @@ public class PlayerHandler : MonoBehaviour
         {
             GameManager.isDead = true;
         }
-        
-        controller.Move(speed);
-        if (Input.GetKeyDown("space"))
-        {
-            controller.Jump(jump);
-            
-        }
         if (curMana <= 0 || Blaster <= 0)
         {
             CanCast = false;
@@ -81,14 +75,28 @@ public class PlayerHandler : MonoBehaviour
         {
             CanCast = true;
         }
-        
+
         if (Input.GetKeyDown("e") && CanCast == true)
         {
             controller.Magic();
             anim.SetTrigger("Spell");
         }
+
+        if (run)
+        {
+            controller.Move(speed);
+            if (Input.GetKeyDown("space"))
+            {
+                controller.Jump(jump);
+            }
+        }
         Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
-        float temp = gameObject.transform.position.x/10;
+        float temp = gameObject.transform.position.x / 10;
         ScoreManager.distance = (float)Math.Round(temp);
+    }
+
+    public void StartRunning()
+    {
+        run = true;
     }
 }
