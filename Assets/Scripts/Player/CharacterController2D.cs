@@ -148,19 +148,14 @@ public class CharacterController2D : MonoBehaviour
 
     }
     public void Magic()
-    {
-        if (PlayerHandler.Blaster >= 0)
-        {
-            PlayerHandler.curMana -= 1;
-        }
-        
+    {   
         if (IsFacingRight == true)
         {
-            Instantiate(rightBullet);
+            Instantiate(rightBullet, m_FrontCheck.transform.position, new Quaternion(0, 0, 0, 0));
         }
         else
         {
-            Instantiate(leftBullet);
+            Instantiate(leftBullet, m_FrontCheck.transform.position, new Quaternion(0,0,0,0));
         }
     }
     

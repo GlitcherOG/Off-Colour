@@ -6,23 +6,37 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
+    public static PlayerHandler Instance = null;
     public CharacterController2D controller;
     public float speed = 20f;
     public float jump = 10f;
     public bool run;
     public GameObject Camera;
     public GameObject CameraLocation;
-    public static float maxHealth, curHealth, maxMana, curMana;
+    public float maxHealth, curHealth, maxMana, curMana;
     public Slider healthBar, magicBar;
-    public static float Ghoster, Warper, Blaster;
-    public static bool CanCast;
+    public float Ghoster, Warper, Blaster;
+    public bool blasterAnimRunning;
+    public bool CanCast;
     public Animator anim;
     // Start is called before the first frame update
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     void Start()
     {
         Ghoster = 0;
         Warper = 0;
-        Blaster = 0;
+        Blaster = 1;
         maxHealth = 3;
         maxMana = 3;
         curHealth = maxHealth;
@@ -50,10 +64,10 @@ public class PlayerHandler : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
-        if (Blaster >= 0)
-        {
-            Blaster -= Time.deltaTime;
-        }
+        //if (Blaster >= 0)
+        //{
+        //    Blaster -= Time.deltaTime;
+        //}
 
         if (healthBar.value != curHealth / maxHealth)
         {
@@ -76,9 +90,13 @@ public class PlayerHandler : MonoBehaviour
             CanCast = true;
         }
 
-        if (Input.GetKeyDown("e") && CanCast == true)
+        if (Input.GetKeyDown("e") && CanCast == true && !blasterAnimRunning)
         {
-            controller.Magic();
+            blasterAnimRunning = true;
+            if (Blaster >= 0)
+            {
+                curMana -= 1;
+            }
             anim.SetTrigger("Spell");
         }
 
@@ -94,7 +112,10 @@ public class PlayerHandler : MonoBehaviour
         float temp = gameObject.transform.position.x / 10;
         ScoreManager.distance = (float)Math.Round(temp);
     }
-
+    public void BlasterAnimRunning()
+    {
+        blasterAnimRunning = false;
+    }
     public void StartRunning()
     {
         run = true;

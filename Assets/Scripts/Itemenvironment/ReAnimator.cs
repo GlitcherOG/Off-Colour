@@ -13,7 +13,7 @@ public class ReAnimator : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            PlayerHandler.Ghoster += 10;
+            PlayerHandler.Instance.Ghoster += 10;
             Destroy(self.gameObject);
         }
 

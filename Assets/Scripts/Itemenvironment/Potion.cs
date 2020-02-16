@@ -10,9 +10,9 @@ public class Potion : MonoBehaviour
     {
 
 
-        if (other.tag == "Player" && PlayerHandler.curMana != PlayerHandler.maxMana)
+        if (other.tag == "Player" && PlayerHandler.Instance.curMana != PlayerHandler.Instance.maxMana)
         {
-            PlayerHandler.curMana += 1;
+            PlayerHandler.Instance.curMana += 1;
             Destroy(self.gameObject);
         }
 

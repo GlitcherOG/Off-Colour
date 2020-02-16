@@ -104,10 +104,10 @@ TextureImporter:
       name: magic_fire_cyan_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 6
-        width: 69
-        height: 16
+        x: 0
+        y: 0
+        width: 68
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,7 +115,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 098370d8e74575247998ef02406f119f
+      spriteID: e5718fba5bcf82a479fc85859184321c
       internalID: 5873002863236877083
       vertices: []
       indices: 
@@ -125,10 +125,10 @@ TextureImporter:
       name: magic_fire_cyan_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 4
-        width: 43
-        height: 17
+        x: 68
+        y: 0
+        width: 68
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03189e32bf011ee4cb3171ed8e862075
+      spriteID: 96f665e036ea08548956f829d84e228f
       internalID: 3113718682414056028
       vertices: []
       indices: 
@@ -146,10 +146,10 @@ TextureImporter:
       name: magic_fire_cyan_2
       rect:
         serializedVersion: 2
-        x: 154
-        y: 5
-        width: 16
-        height: 6
+        x: 136
+        y: 0
+        width: 68
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0204274860fef234e8fab422a13fcfe6
+      spriteID: e92f6b91036c95548b4762433080033a
       internalID: -2903146367420703093
       vertices: []
       indices: 
@@ -167,10 +167,10 @@ TextureImporter:
       name: magic_fire_cyan_3
       rect:
         serializedVersion: 2
-        x: 155
-        y: 4
-        width: 44
-        height: 15
+        x: 204
+        y: 0
+        width: 68
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,29 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cdeb2812984a214bb2c4a3a3102bc43
+      spriteID: 2c9b6c7fe460ecf4eb55f8f019b445f7
       internalID: -7642093463580311796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: magic_fire_cyan_4
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 4
-        width: 47
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 914d3f65cd670e94791c38381c956af3
-      internalID: -1613432426734728409
       vertices: []
       indices: 
       edges: []

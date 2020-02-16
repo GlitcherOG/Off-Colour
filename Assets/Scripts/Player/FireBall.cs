@@ -16,7 +16,6 @@ public class FireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (right == true)
         {
             rb.velocity = new Vector2(velX, 0);
@@ -24,6 +23,10 @@ public class FireBall : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(-velX, 0);
+        }
+        if(!GetComponent<Renderer>().isVisible)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
