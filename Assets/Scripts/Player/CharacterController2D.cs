@@ -130,8 +130,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (!IsGrounded && doubleJump && !airTesting)
         {
-            Debug.Log("DJump");
-            Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
+            Rigidbody.AddForce(new Vector2(0.5f, height - Rigidbody.velocity.y), ForceMode2D.Impulse);
             airTesting = true;
             Anim.SetTrigger("Double Jump");
         }
@@ -139,8 +138,6 @@ public class CharacterController2D : MonoBehaviour
         if (IsGrounded && !airTesting)
         {
             IsGrounded = false;
-            Debug.Log(airTesting);
-            Debug.Log("Jump");
             Rigidbody.AddForce(new Vector2(0.5f, height + Rigidbody.velocity.y), ForceMode2D.Impulse);
             Anim.SetTrigger("Jump");
         }
