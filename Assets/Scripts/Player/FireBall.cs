@@ -10,7 +10,7 @@ public class FireBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,7 +24,15 @@ public class FireBall : MonoBehaviour
         {
             rb.velocity = new Vector2(-velX, 0);
         }
-        if(!GetComponent<Renderer>().isVisible)
+        if (!GetComponent<Renderer>().isVisible)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag != "Player")
         {
             Destroy(this.gameObject);
         }

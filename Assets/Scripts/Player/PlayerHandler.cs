@@ -36,7 +36,7 @@ public class PlayerHandler : MonoBehaviour
     {
         Ghoster = 0;
         Warper = 0;
-        Blaster = 1;
+        Blaster = 0;
         maxHealth = 3;
         maxMana = 3;
         curHealth = maxHealth;
@@ -64,10 +64,10 @@ public class PlayerHandler : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
-        //if (Blaster >= 0)
-        //{
-        //    Blaster -= Time.deltaTime;
-        //}
+        if (Blaster >= 0)
+        {
+            Blaster -= Time.deltaTime;
+        }
 
         if (healthBar.value != curHealth / maxHealth)
         {

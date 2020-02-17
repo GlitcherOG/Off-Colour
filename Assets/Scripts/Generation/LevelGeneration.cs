@@ -8,12 +8,15 @@ public class LevelGeneration : MonoBehaviour
     public GameObject[] obsitcles;
     public GameObject platform;
     public GameObject[] powerUps;
-    public float spawnCoolDown = 20f;
+    public float spawnCoolDown = 0f;
     public float objectCoolDown = 20f;
     public bool debug;
     private void Start()
     {
-
+        for (int i = 0; i < 6; i++)
+        {
+            GameObject plat = Instantiate(platform, new Vector3(Player.transform.position.x + 50*i, 0f), transform.rotation) as GameObject;
+        }
     }
 
     private void Update()
@@ -36,6 +39,6 @@ public class LevelGeneration : MonoBehaviour
 
     void SpawnGround()
     {
-        GameObject plat = Instantiate(platform, new Vector3(Player.transform.position.x + 100, 0f), transform.rotation) as GameObject;
+       GameObject plat = Instantiate(platform, new Vector3(Player.transform.position.x + 250, 0f), transform.rotation) as GameObject;
     }
 }

@@ -101,10 +101,10 @@ TextureImporter:
       name: player_jump_cloak_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 12
-        width: 59
-        height: 64
+        x: 0
+        y: 0
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f1b21f121a3dfb4a846beec15aa48fa
+      spriteID: a6f4dfaacef06254d9a8632c9b61712b
       internalID: 7375925408720184685
       vertices: []
       indices: 
@@ -122,10 +122,10 @@ TextureImporter:
       name: player_jump_cloak_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 13
-        width: 68
-        height: 66
+        x: 78
+        y: 0
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,7 +133,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 712bceb0f4a1e744d8eb74dc06f7fce1
+      spriteID: 92c32f4acaaa1e9489a0d144426e14c1
       internalID: 195323289179949372
       vertices: []
       indices: 
@@ -143,10 +143,10 @@ TextureImporter:
       name: player_jump_cloak_2
       rect:
         serializedVersion: 2
-        x: 166
-        y: 8
-        width: 63
-        height: 72
+        x: 156
+        y: 0
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +154,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e2cebe5dead8c6449ba4910ad8cc102
+      spriteID: 2a64510a58666e349b6fbfd71e384031
       internalID: -3805366280131562855
       vertices: []
       indices: 
@@ -164,10 +164,10 @@ TextureImporter:
       name: player_jump_cloak_3
       rect:
         serializedVersion: 2
-        x: 248
-        y: 10
-        width: 62
-        height: 69
+        x: 234
+        y: 0
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbe656e7eea5764d974af10f737bc72
+      spriteID: 5507370aa33ee0c4984bfc357c4ddc8d
       internalID: -4035399727304737519
       vertices: []
       indices: 

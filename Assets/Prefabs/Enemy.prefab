@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 3.5
-  cooldown: 50
+  cooldown: 1000

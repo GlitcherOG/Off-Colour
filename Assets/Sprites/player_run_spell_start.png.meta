@@ -101,10 +101,10 @@ TextureImporter:
       name: player_run_spell_start_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 63
-        height: 61
+        x: 0
+        y: 0
+        width: 76
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 149645e00bace4549a29a47cf8cea7a5
+      spriteID: 768b513298cf3074482c01feafe414bc
       internalID: 923876849398031535
       vertices: []
       indices: 
@@ -122,10 +122,10 @@ TextureImporter:
       name: player_run_spell_start_1
       rect:
         serializedVersion: 2
-        x: 83
+        x: 76
         y: 0
-        width: 65
-        height: 64
+        width: 76
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,7 +133,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cba1d6f972e84444bb12e1633c968b7a
+      spriteID: 0ae51a28f612d7d49879e5298ac80323
       internalID: -3129829462015497769
       vertices: []
       indices: 
@@ -143,10 +143,10 @@ TextureImporter:
       name: player_run_spell_start_2
       rect:
         serializedVersion: 2
-        x: 157
+        x: 152
         y: 0
-        width: 62
-        height: 63
+        width: 76
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +154,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79d5431fa097a8049a74ed7c638b3cd0
+      spriteID: 241a3f7acf81bea439c6a4228bab6383
       internalID: 8557286273434551857
       vertices: []
       indices: 
@@ -164,10 +164,10 @@ TextureImporter:
       name: player_run_spell_start_3
       rect:
         serializedVersion: 2
-        x: 230
+        x: 228
         y: 0
-        width: 63
-        height: 63
+        width: 76
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af1ea9c8ee674484faa7582d182eb8d9
+      spriteID: 705af76a290fd6f46a4d4f7d4e6fc474
       internalID: 2208703521632400001
       vertices: []
       indices: 
