@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ca6c7ea455fe21a499d3e8cb19eed843
   - enabled: 1
+    path: Assets/Scenes/Lachlan.unity
+    guid: ff6dbf2cb66531b4ab1547fae18d03f6
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 8ba198be0a99a064bb786a3b8d4710c6
   m_configObjects: {}
