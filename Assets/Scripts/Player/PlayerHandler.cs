@@ -15,10 +15,11 @@ public class PlayerHandler : MonoBehaviour
     public GameObject CameraLocation;
     public float maxHealth, curHealth, maxMana, curMana;
     public Slider healthBar, magicBar;
-    public float Ghoster, Warper, Blaster;
+    public float Ghoster, Warper, Blaster, Stopper;
     public bool blasterAnimRunning;
     public bool CanCast;
     public Animator anim;
+    public GameObject Ghost, Warp, Blast;
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,18 +42,40 @@ public class PlayerHandler : MonoBehaviour
         maxMana = 3;
         curHealth = maxHealth;
         curMana = 3;
+        Stopper = 3;
     }
    
     // Update is called once per frame
     void Update()
     {
+        
+        if (controller.Rigidbody.velocity.x <= 0.1 && run)
+        {
+            Stopper -= Time.deltaTime;
+            if (Stopper <= 0)
+            {
+                curHealth -= 1;
+                Stopper += 2;
+            }
+        }
+        
         if (Ghoster >= 0)
         {
             Ghoster -= Time.deltaTime;
+            Ghost.SetActive(true);
+        }
+        else
+        {
+            Ghost.SetActive(false);
         }
         if (Warper >= 0)
         {
             Warper -= Time.deltaTime;
+            Warp.SetActive(true);
+        }
+        else
+        {
+            Warp.SetActive(false);
         }
         if (Time.timeScale == 0.25f && Warper <= 0)
         {
@@ -61,8 +84,12 @@ public class PlayerHandler : MonoBehaviour
         if (Blaster >= 0)
         {
             Blaster -= Time.deltaTime;
+            Blast.SetActive(true);
         }
-
+        else
+        {
+            Blast.SetActive(false);
+        }
         if (healthBar.value != curHealth / maxHealth)
         {
             healthBar.value = curHealth / maxHealth;

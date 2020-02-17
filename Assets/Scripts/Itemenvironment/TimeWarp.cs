@@ -13,7 +13,7 @@ public class TimeWarp : MonoBehaviour
         if (other.tag == "Player")
         {
             PlayerHandler.Instance.Warper += 2;
-            Time.timeScale = 0.25f;
+            Time.timeScale = 0.4f;
             Destroy(self.gameObject);
         }
 

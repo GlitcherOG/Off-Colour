@@ -24,7 +24,7 @@ public class CharacterController2D : MonoBehaviour
     public bool IsFacingRight { get; private set; } = true; //Is the character facing right
     public Rigidbody2D Rigidbody { get; private set; } //Character rigidbody
     public Animator Anim { get; private set; } //Character animatior
-
+    
     [Header("Abilites")]
     public bool doubleJump = true;
     public bool airTesting;
@@ -69,6 +69,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         if (glide == true)
         {
             Rigidbody.gravityScale = 1f;
