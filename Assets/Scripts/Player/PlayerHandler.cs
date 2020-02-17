@@ -106,6 +106,12 @@ public class PlayerHandler : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 controller.Jump(jump);
+
+            }
+            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true)
+            {
+                controller.glide = true;
+                controller.Rigidbody.velocity = new Vector2(controller.Rigidbody.velocity.x, 0.1f);
             }
         }
         Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);

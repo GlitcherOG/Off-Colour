@@ -28,6 +28,7 @@ public class CharacterController2D : MonoBehaviour
     [Header("Abilites")]
     public bool doubleJump = true;
     public bool airTesting;
+    public bool glide = false;
     public bool HasParameter(string paramName, Animator animator)
     {
         foreach (AnimatorControllerParameter param in animator.parameters)
@@ -68,6 +69,15 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (glide == true)
+        {
+            Rigidbody.gravityScale = 1f;
+            
+        }
+        else
+        {
+            Rigidbody.gravityScale = 5f;
+        }
         //Start the defualt animations
         AnimateDefault();
         //Change the bool wasGrounded to the state of IsGrounded
@@ -121,6 +131,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (IsGrounded)
         {
+            glide = false;
             airTesting = false;
         }
     }
@@ -143,8 +154,10 @@ public class CharacterController2D : MonoBehaviour
         }
         else
         {
+            glide = true;
             Anim.SetBool("Glide", true);
         }
+        
 
     }
     public void Magic()
