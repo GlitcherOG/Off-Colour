@@ -42,13 +42,7 @@ public class PlayerHandler : MonoBehaviour
         curHealth = maxHealth;
         curMana = 3;
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("DangerZone") && Ghoster <= 0)
-        {
-            curHealth -= 1;
-        }
-    }
+   
     // Update is called once per frame
     void Update()
     {
