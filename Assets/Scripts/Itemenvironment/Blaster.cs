@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeWarp : MonoBehaviour
+public class Blaster : MonoBehaviour
 {
     public GameObject self;
 
@@ -12,8 +12,7 @@ public class TimeWarp : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            PlayerHandler.Instance.Warper += 2;
-            Time.timeScale = 0.25f;
+            PlayerHandler.Instance.Blaster += 10;
             Destroy(self.gameObject);
         }
 
@@ -25,9 +24,4 @@ public class TimeWarp : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

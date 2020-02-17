@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BrickManager : MonoBehaviour
+public class BrickManager1 : MonoBehaviour
 {
     public Rigidbody2D rigid;
     
@@ -24,10 +24,10 @@ public class BrickManager : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.gameObject.tag == "Player")
-        //{
-            //Collapse();
-        //}
+        if (other.gameObject.tag == "Spike")
+        {
+            Collapse();
+        }
     }
     // Update is called once per frame
     void Update()

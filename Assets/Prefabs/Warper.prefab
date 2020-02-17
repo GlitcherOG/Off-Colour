@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3513720516065802567}
   - component: {fileID: 2222496267474619196}
   - component: {fileID: 6292873594166883656}
-  - component: {fileID: 6382322330177078895}
   - component: {fileID: 356895154}
+  - component: {fileID: 4949986003529600736}
   m_Layer: 0
-  m_Name: Beer
+  m_Name: Warper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.9190924, b: 0, a: 1}
+  m_Color: {r: 0.4811321, g: 0.22456126, b: 0.011347453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,19 +109,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &6382322330177078895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885260638811032571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a1d38f3a5dd1049a6db6adad19f4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  self: {fileID: 885260638811032571}
 --- !u!114 &356895154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +123,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   y: 2
   cooldown: 10
+--- !u!114 &4949986003529600736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885260638811032571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a567489173b37142ad3c7400b1a76af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 885260638811032571}
