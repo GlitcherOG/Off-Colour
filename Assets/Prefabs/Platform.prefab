@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8435037408367419581}
   - component: {fileID: 8745525761529321822}
   - component: {fileID: 7140726817428851058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,6 +149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 2423475193399992698, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -233,6 +238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Brick (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423475193399992698, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
@@ -319,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2423475193399992698, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -403,6 +418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Brick (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423475193399992698, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
@@ -489,6 +509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2423475193399992698, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
       propertyPath: wall
@@ -573,6 +598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Brick (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423475193399992698, guid: f5aabc7ba1ec68b4581be69407b7a63b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3655044167249527866, guid: f5aabc7ba1ec68b4581be69407b7a63b,
         type: 3}
