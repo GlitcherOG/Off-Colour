@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     {
         isPaused = true;
         TogglePause();
+        isDead = false;
+        Time.timeScale = 1;
+        _pauseMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.None; // lock the mouse cursor
+        Cursor.visible = false;
+        isPaused = false;
     }
     public GameObject SettingsGO;
     public bool gameEnded = false;
@@ -79,6 +85,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         isPaused = false;
 
+
     }
     //
     //create a function to move to next scene by loading the activeScene +1
@@ -98,6 +105,12 @@ public class GameManager : MonoBehaviour
     public void SwitchLevel(int levelID)
     {
         SceneManager.LoadScene(levelID);
+        isDead = false;
+        Time.timeScale = 1;
+        _pauseMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.None; // lock the mouse cursor
+        Cursor.visible = false;
+        isPaused = false;
     }
     public void OpenSettings()
     {

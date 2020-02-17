@@ -518,6 +518,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blast
       objectReference: {fileID: 0}
+    - target: {fileID: 4523702459698837804, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_Text
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089409501312342271, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089409501312342271, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5089409502979873384, guid: 754623e64bee9f7438a91ebc88575c35,
         type: 3}
       propertyPath: m_LocalPosition.x

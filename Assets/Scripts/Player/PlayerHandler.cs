@@ -55,7 +55,7 @@ public class PlayerHandler : MonoBehaviour
             if (Stopper <= 0)
             {
                 curHealth -= 1;
-                Stopper += 2;
+                Stopper += 1;
             }
         }
         
@@ -102,7 +102,7 @@ public class PlayerHandler : MonoBehaviour
         {
             GameManager.isDead = true;
         }
-        if (curMana >= 0 || Blaster >= 0)
+        if (curMana >= 1 || Blaster >= 0)
         {
             CanCast = true;
         }
@@ -114,7 +114,7 @@ public class PlayerHandler : MonoBehaviour
         if (Input.GetKeyDown("e") && CanCast == true && !blasterAnimRunning)
         {
             blasterAnimRunning = true;
-            if (Blaster >= 0)
+            if (Blaster <= 0)
             {
                 curMana -= 1;
             }
