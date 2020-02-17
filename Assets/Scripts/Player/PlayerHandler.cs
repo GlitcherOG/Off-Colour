@@ -40,7 +40,7 @@ public class PlayerHandler : MonoBehaviour
         maxHealth = 3;
         maxMana = 3;
         curHealth = maxHealth;
-        curMana = 0;
+        curMana = 3;
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -81,13 +81,13 @@ public class PlayerHandler : MonoBehaviour
         {
             GameManager.isDead = true;
         }
-        if (curMana <= 0 || Blaster <= 0)
+        if (curMana >= 0 || Blaster >= 0)
         {
-            CanCast = false;
+            CanCast = true;
         }
         else
         {
-            CanCast = true;
+            CanCast = false;
         }
 
         if (Input.GetKeyDown("e") && CanCast == true && !blasterAnimRunning)
@@ -108,10 +108,14 @@ public class PlayerHandler : MonoBehaviour
                 controller.Jump(jump);
 
             }
-            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true)
+            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true && controller.Rigidbody.velocity.y <= 0)
             {
                 controller.glide = true;
-                controller.Rigidbody.velocity = new Vector2(controller.Rigidbody.velocity.x, 0.1f);
+                
+            }
+            else
+            {
+                controller.glide = false;
             }
         }
         Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);

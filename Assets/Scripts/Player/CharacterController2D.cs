@@ -72,10 +72,11 @@ public class CharacterController2D : MonoBehaviour
         if (glide == true)
         {
             Rigidbody.gravityScale = 1f;
-            
+            Anim.SetBool("Glide", true);
         }
         else
         {
+            Anim.SetBool("Glide", false);
             Rigidbody.gravityScale = 5f;
         }
         //Start the defualt animations
@@ -132,6 +133,7 @@ public class CharacterController2D : MonoBehaviour
         if (IsGrounded)
         {
             glide = false;
+            
             airTesting = false;
         }
     }
@@ -154,8 +156,8 @@ public class CharacterController2D : MonoBehaviour
         }
         else
         {
-            glide = true;
-            Anim.SetBool("Glide", true);
+           
+            
         }
         
 
