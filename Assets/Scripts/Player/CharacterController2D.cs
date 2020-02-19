@@ -69,10 +69,12 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
         if (glide == true)
         {
-            Rigidbody.gravityScale = 1f;
+            if (Rigidbody.velocity.y <= 0)
+            {
+                Rigidbody.gravityScale = 1f;
+            }
             Anim.SetBool("Glide", true);
         }
         else
@@ -134,7 +136,6 @@ public class CharacterController2D : MonoBehaviour
         if (IsGrounded)
         {
             glide = false;
-            
             airTesting = false;
         }
     }
@@ -157,8 +158,7 @@ public class CharacterController2D : MonoBehaviour
         }
         else
         {
-           
-            
+
         }
         
 

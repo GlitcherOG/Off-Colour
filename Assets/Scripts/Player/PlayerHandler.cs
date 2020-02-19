@@ -129,7 +129,7 @@ public class PlayerHandler : MonoBehaviour
                 controller.Jump(jump);
 
             }
-            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true && controller.Rigidbody.velocity.y <= 0)
+            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true)
             {
                 controller.glide = true;
                 
