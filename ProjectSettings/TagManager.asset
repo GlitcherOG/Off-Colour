@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Platform
   - Enemy
+  - Blast
   layers:
   - Default
   - TransparentFX
