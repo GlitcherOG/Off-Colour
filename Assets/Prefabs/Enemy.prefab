@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 3.5
-  cooldown: 300
+  cooldown: 100
 --- !u!1001 &6222128939538721238
 PrefabInstance:
   m_ObjectHideFlags: 0

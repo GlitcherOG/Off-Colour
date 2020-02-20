@@ -58,6 +58,10 @@ public class PlayerHandler : MonoBehaviour
                 Stopper += 1;
             }
         }
+        if (controller.transform.position.y <= -2)
+        {
+            curHealth -= 1;
+        }
         
         if (Ghoster >= 0)
         {
@@ -77,7 +81,7 @@ public class PlayerHandler : MonoBehaviour
         {
             Warp.SetActive(false);
         }
-        if (Time.timeScale == 0.25f && Warper <= 0)
+        if (Time.timeScale != 1f && Warper <= 0)
         {
             Time.timeScale = 1f;
         }

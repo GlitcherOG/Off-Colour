@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 2
-  cooldown: 10
+  cooldown: 100
 --- !u!114 &4212279322536487131
 MonoBehaviour:
   m_ObjectHideFlags: 0
