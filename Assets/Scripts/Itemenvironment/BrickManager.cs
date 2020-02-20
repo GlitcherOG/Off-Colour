@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class BrickManager : MonoBehaviour
 {
+
+
+    public GameObject top;
     public Rigidbody2D rigid;
-    
+
     public bool intact = true;
     public GameObject self;
 
@@ -18,13 +21,17 @@ public class BrickManager : MonoBehaviour
     }
     public void Collapse()
     {
+        Destroy(top);
         self.tag = "Spike";
+        rigid.sharedMaterial.friction = 0.1f;
+        rigid.sharedMaterial.bounciness = 0.75f;
         rigid.constraints = RigidbodyConstraints2D.None;
+        
         intact = false;
     }
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Spike")
+        if (collision.tag == "DangerZone" || collision.tag == "Spike")
         {
             Collapse();
         }
@@ -32,7 +39,8 @@ public class BrickManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-      
+
+
     }
 }
+
