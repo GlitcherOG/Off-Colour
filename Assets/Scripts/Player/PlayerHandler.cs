@@ -77,7 +77,8 @@ public class PlayerHandler : MonoBehaviour
         }
         else if (run && Stopper <= 3 && dis >= 0.4)
         {
-             Stopper += Time.deltaTime;
+            Stopper += Time.deltaTime;
+            stopperCooldown = 2;
         }
         if (controller.transform.position.y <= -2)
         {

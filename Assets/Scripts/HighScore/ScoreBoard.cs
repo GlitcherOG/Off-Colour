@@ -19,7 +19,7 @@ public class ScoreBoard : MonoBehaviour
         for (int i = 0; i < 8; i++)
         {
             //Change the scoreplacement texts in the location of i in the array
-            scorePlacements[i].text = (i+1).ToString() + ". " + high.high[high.high.Length-i-1].player + ": " + high.high[high.high.Length-i-1].wave;
+            scorePlacements[i].text = (i+1).ToString() + ". " + high.high[high.high.Length-i-1].player + ": " + high.high[high.high.Length-i-1].dis;
         }
     }
 }

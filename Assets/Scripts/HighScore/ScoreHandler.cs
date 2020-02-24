@@ -26,7 +26,7 @@ public class ScoreHandler : MonoBehaviour
                 //Set the player in high to player playername in data 
                 high[i].player = data.playerName[i];
                 //set the wave in high to the wave in data
-                high[i].wave = data.wave[i];
+                high[i].dis = data.wave[i];
             }
         }
         else //else if data is null
@@ -37,7 +37,7 @@ public class ScoreHandler : MonoBehaviour
                 //Set the player to blank
                 high[i].player = "Blank";
                 //Set the wave to zero
-                high[i].wave = 0;
+                high[i].dis = 0;
             }
         }
         //Sort the score data
@@ -48,7 +48,7 @@ public class ScoreHandler : MonoBehaviour
     public void NewScore(string name, int number)
     {
         //Set the wave 0 to the number
-        high[0].wave = number;
+        high[0].dis = number;
         //set the player to equal name
         high[0].player = name;
         //Sort
@@ -58,7 +58,7 @@ public class ScoreHandler : MonoBehaviour
     public void Sort()
     {
         //Sort the strut in a desending order
-        Array.Sort(high, (x, y) => x.wave.CompareTo(y.wave));
+        Array.Sort(high, (x, y) => x.dis.CompareTo(y.dis));
         //Save the data
         Save();
     }
@@ -78,7 +78,7 @@ public class ScoreHandler : MonoBehaviour
             //Set data in playername in location i of the array to high in location i of the struts string player
             data.playerName[i] = high[i].player;
             //Set data in wave in location i of the array to high in location i of the struts int wave
-            data.wave[i] = high[i].wave;
+            data.wave[i] = high[i].dis;
         }
         //Write the Variable data to an XML file
         XMLSaving.WriteData(data);
@@ -89,5 +89,5 @@ public class ScoreHandler : MonoBehaviour
 public struct Scores
 {
     public string player; //String for player names
-    public int wave; //int for ammount of waves done
+    public int dis; //int for ammount of waves done
 }
