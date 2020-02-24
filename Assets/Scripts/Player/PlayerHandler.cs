@@ -8,7 +8,7 @@ public class PlayerHandler : MonoBehaviour
 {
     public static PlayerHandler Instance = null;
     public CharacterController2D controller;
-    public float speed = 20f;
+    public float speed = 40f;
     public float jump = 10f;
     public bool run;
     public GameObject Camera;
@@ -59,7 +59,7 @@ public class PlayerHandler : MonoBehaviour
             if (Stopper <= 0)
             {
                 curHealth -= 1;
-                Stopper += 1;
+                Stopper += 2;
                 
             }
             else

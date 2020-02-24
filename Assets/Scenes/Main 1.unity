@@ -3495,6 +3495,26 @@ PrefabInstance:
       propertyPath: Blast
       value: 
       objectReference: {fileID: 636850984}
+    - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: curHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: maxMana
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: curMana
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8263664447316047923, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}
       propertyPath: m_GroundRayLength

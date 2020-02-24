@@ -100,7 +100,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: e735d468596991d419656d6030fc3bd2, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -172,3 +172,4 @@ MonoBehaviour:
   rigid: {fileID: 2411105075006736381}
   intact: 1
   self: {fileID: 7423782388179018405}
+  explode: {fileID: 6200000, guid: e735d468596991d419656d6030fc3bd2, type: 2}

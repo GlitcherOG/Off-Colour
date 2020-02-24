@@ -9,6 +9,7 @@ public class DoorManager : MonoBehaviour
    
     public bool intact = true;
     public GameObject self;
+    public PhysicsMaterial2D explode;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class DoorManager : MonoBehaviour
     }
     public void Collapse()
     {
-
+        rigid.sharedMaterial = explode;
         self.tag = "Spike";
         rigid.constraints = RigidbodyConstraints2D.None;
         intact = false;

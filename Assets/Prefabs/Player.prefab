@@ -134,8 +134,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1756466035
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8204335442217980708, guid: ea2244189d9fa194b8d31d2141881a0b,
     type: 3}
@@ -180,7 +180,6 @@ MonoBehaviour:
   blasterAnimRunning: 0
   CanCast: 0
   anim: {fileID: 8263664447316047921}
-  monster: {fileID: 0}
   Ghost: {fileID: 0}
   Warp: {fileID: 0}
   Blast: {fileID: 0}

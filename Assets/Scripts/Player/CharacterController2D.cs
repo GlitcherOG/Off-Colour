@@ -214,7 +214,7 @@ public class CharacterController2D : MonoBehaviour
                 }
             }
             //
-            Vector3 targetVelocity = new Vector2(offsetX, Rigidbody.velocity.y);
+            Vector3 targetVelocity = new Vector2(offsetX*2, Rigidbody.velocity.y);
             //New Vector3 velocity
             Vector3 velocity = Vector3.zero;
             //Changes the rigidbody velocity 
