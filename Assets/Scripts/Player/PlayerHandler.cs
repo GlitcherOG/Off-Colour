@@ -7,20 +7,28 @@ using UnityEngine.UI;
 public class PlayerHandler : MonoBehaviour
 {
     public static PlayerHandler Instance = null;
+    [Header("Base Stats")]
     public CharacterController2D controller;
     public float speed = 40f;
     public float jump = 10f;
     public bool run;
+    public float maxHealth, curHealth, maxMana, curMana; //Player Stats
+    [Header("Camera Things")]
     public GameObject Camera;
     public GameObject CameraLocation;
-    public float maxHealth, curHealth, maxMana, curMana;
-    public Slider healthBar, magicBar;
-    public float Ghoster, Warper, Blaster, Stopper;
+    public float Ghoster, Warper, Blaster, Stopper; //Check and Optimise
+    float stopperCooldown;
+    [Header("Animation Things")]
     public bool blasterAnimRunning;
     public bool CanCast;
-    public Animator anim;
-    public GameObject Ghost, Warp, Blast;
+    [Header("Objects")]
+    public Slider healthBar;
+    public Slider magicBar; //Move off as well
+    public GameObject Ghost, Warp, Blast; //Move off this
     // Start is called before the first frame update
+    Vector2 prev;
+    float dis;
+
     void Awake()
     {
         if (Instance == null)
@@ -43,35 +51,107 @@ public class PlayerHandler : MonoBehaviour
         curHealth = maxHealth;
         curMana = 3;
         Stopper = 3;
+        stopperCooldown = 2;
     }
-   
+
     // Update is called once per frame
     void Update()
     {
-        if (CameraLocation.transform.position.x != 3-Stopper)
+        dis = Vector2.Distance(prev, transform.position);
+        prev = transform.position;
+        if (dis <= 0.4 && run)
         {
-            CameraLocation.transform.localPosition = new Vector3 (3-Stopper,0);
-        }
-        
-        if (controller.Rigidbody.velocity.x <= 0.1 && run)
-        {
-            Stopper -= Time.deltaTime;
             if (Stopper <= 0)
             {
-                curHealth -= 1;
-                Stopper += 2;
-                
+                if (stopperCooldown <= 0)
+                {
+                    curHealth -= 1;
+                    stopperCooldown = 2;
+                }
+                stopperCooldown -= Time.deltaTime;
             }
             else
             {
-                
+                Stopper -= Time.deltaTime;
             }
+        }
+        else if (run && Stopper <= 3 && dis >= 0.4)
+        {
+             Stopper += Time.deltaTime;
         }
         if (controller.transform.position.y <= -2)
         {
-            curHealth -= 1;
+            curHealth = 0;
         }
-        
+        if (curHealth == 0)
+        {
+            GameManager.isDead = true;
+        }
+        if (curMana >= 1 || Blaster >= 0)
+        {
+            CanCast = true;
+        }
+        else
+        {
+            CanCast = false;
+        }
+
+        if (Input.GetKeyDown("e") && CanCast == true && !blasterAnimRunning)
+        {
+            blasterAnimRunning = true;
+            if (Blaster <= 0)
+            {
+                curMana -= 1;
+            }
+            controller.Anim.SetTrigger("Spell");
+        }
+        CameraChecks();
+        AblitiesCheck();
+        if(run)
+        {
+            Movement();
+        }
+        UIElements();
+        float temp = gameObject.transform.position.x / 10;
+        ScoreManager.distance = (float)Math.Round(temp);
+    }
+
+    void UIElements()
+    {
+        if (healthBar.value != curHealth / maxHealth)
+        {
+            healthBar.value = curHealth / maxHealth;
+        }
+        if (magicBar.value != curMana / maxMana)
+        {
+            magicBar.value = curMana / maxMana;
+        }
+    }
+
+    void Movement()
+    {
+            controller.Move(speed);
+            if (Input.GetKeyDown("space"))
+            {
+                controller.Jump(jump);
+            }
+            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true)
+            {
+                controller.glide = true;
+            }
+            else
+            {
+                controller.glide = false;
+            }
+    }
+
+    void CameraChecks()
+    {
+        CameraLocation.transform.localPosition = new Vector3(3 - Stopper, 0);
+        Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
+    }
+    void AblitiesCheck()
+    {
         if (Ghoster >= 0)
         {
             Ghoster -= Time.deltaTime;
@@ -103,58 +183,6 @@ public class PlayerHandler : MonoBehaviour
         {
             Blast.SetActive(false);
         }
-        if (healthBar.value != curHealth / maxHealth)
-        {
-            healthBar.value = curHealth / maxHealth;
-        }
-        if (magicBar.value != curMana / maxMana)
-        {
-            magicBar.value = curMana / maxMana;
-        }
-        if (curHealth == 0)
-        {
-            GameManager.isDead = true;
-        }
-        if (curMana >= 1 || Blaster >= 0)
-        {
-            CanCast = true;
-        }
-        else
-        {
-            CanCast = false;
-        }
-
-        if (Input.GetKeyDown("e") && CanCast == true && !blasterAnimRunning)
-        {
-            blasterAnimRunning = true;
-            if (Blaster <= 0)
-            {
-                curMana -= 1;
-            }
-            anim.SetTrigger("Spell");
-        }
-
-        if (run)
-        {
-            controller.Move(speed);
-            if (Input.GetKeyDown("space"))
-            {
-                controller.Jump(jump);
-
-            }
-            if (Input.GetKey("space") && controller.IsGrounded == false && controller.airTesting == true)
-            {
-                controller.glide = true;
-                
-            }
-            else
-            {
-                controller.glide = false;
-            }
-        }
-        Camera.transform.position = new Vector3(CameraLocation.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
-        float temp = gameObject.transform.position.x / 10;
-        ScoreManager.distance = (float)Math.Round(temp);
     }
     public void BlasterAnimRunning()
     {
