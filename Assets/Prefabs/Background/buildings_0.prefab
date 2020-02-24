@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3933988410299539772}
   - component: {fileID: 3933988410299539773}
-  - component: {fileID: 3933988410299539770}
   - component: {fileID: 3933988410299539771}
+  - component: {fileID: 9064199960994331297}
   m_Layer: 0
   m_Name: buildings_0
   m_TagString: Untagged
@@ -83,53 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3933988410299539770
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3933988410299539768}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 23.1, y: 13.3}
-    newSize: {x: 23.1, y: 13.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 10.85, y: -3.05}
-      - {x: 11.45, y: -1.45}
-      - {x: 11.55, y: -0.75}
-      - {x: 11.55, y: 0.85}
-      - {x: 7.25, y: 4.25}
-      - {x: 4.05, y: 6.65}
-      - {x: 2.3500001, y: 6.65}
-      - {x: -4.55, y: 3.05}
-      - {x: -11.55, y: -0.65000004}
-      - {x: -11.55, y: -1.35}
-      - {x: -10.55, y: -2.15}
-      - {x: -10.45, y: -3.15}
-      - {x: -10.25, y: -3.3500001}
-      - {x: -9.95, y: -3.25}
-      - {x: -9.95, y: -1.15}
-      - {x: -9.95, y: -2.8500001}
-      - {x: -9.85, y: -5.65}
-      - {x: -11.25, y: -6.35}
-      - {x: -10.95, y: -6.65}
-      - {x: 11.55, y: -6.65}
-      - {x: 11.55, y: -5.9500003}
-      - {x: 10.95, y: -5.55}
 --- !u!114 &3933988410299539771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,3 +97,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   y: 7
   cooldown: 1
+--- !u!68 &9064199960994331297
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933988410299539768}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -11.550003, y: -0.86712646}
+  - {x: 3.2273483, y: 6.688691}
+  - {x: 11.47271, y: 0.50237894}

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7730626529382255153}
   - component: {fileID: 7730626529382255152}
-  - component: {fileID: 7730626529382255159}
   - component: {fileID: 7730626529382255158}
   m_Layer: 0
   m_Name: buildings_7
@@ -83,72 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &7730626529382255159
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7730626529382255157}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 33.2}
-    newSize: {x: 10, y: 33.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 4.2000003, y: 8}
-      - {x: 4.7000003, y: 8}
-      - {x: 5, y: 9.5}
-      - {x: 5, y: 10.900001}
-      - {x: 3.9, y: 12.5}
-      - {x: 1.7, y: 14.5}
-      - {x: 1.3000001, y: 16.6}
-      - {x: -0.5, y: 16.6}
-      - {x: -0.3, y: 15.8}
-      - {x: -3, y: 11.900001}
-      - {x: -3.4, y: 11.8}
-      - {x: -4.3, y: 10.5}
-      - {x: -4.4, y: 10.1}
-      - {x: -4, y: 9.400001}
-      - {x: -3.5, y: 9.1}
-      - {x: -4.1, y: 5.3}
-      - {x: -5, y: 3.5}
-      - {x: -5, y: 0.4}
-      - {x: -4.5, y: -3.4}
-      - {x: -4.3, y: -3.6000001}
-      - {x: -4, y: -3.5}
-      - {x: -4.1, y: -8.2}
-      - {x: -3.8, y: -8.7}
-      - {x: -3, y: -7.3}
-      - {x: -3.4, y: -5.1}
-      - {x: -2.7, y: -0.7}
-      - {x: -2.7, y: -16.6}
-      - {x: 3.5, y: -16.6}
-      - {x: 3.6000001, y: 3.5}
-      - {x: 4, y: 3.3}
-      - {x: 4.3, y: 4.8}
-    - - {x: -2.6000001, y: 2.8}
-      - {x: -2.6000001, y: 3.1000001}
-      - {x: -2.9, y: 3.6000001}
-      - {x: -3, y: 4.2000003}
-      - {x: -3.2, y: 4.4}
-      - {x: -2.8, y: 4.8}
-      - {x: -2.9, y: 7.9}
-      - {x: -3, y: 7.7000003}
-      - {x: -2.8, y: 7.4}
-      - {x: -2.8, y: 1.5}
 --- !u!114 &7730626529382255158
 MonoBehaviour:
   m_ObjectHideFlags: 0
