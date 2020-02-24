@@ -48,6 +48,10 @@ public class PlayerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CameraLocation.transform.position.x != 3-Stopper)
+        {
+            CameraLocation.transform.localPosition = new Vector3 (3-Stopper,0);
+        }
         
         if (controller.Rigidbody.velocity.x <= 0.1 && run)
         {

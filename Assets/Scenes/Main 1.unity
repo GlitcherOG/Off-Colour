@@ -1455,7 +1455,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 648532275
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7238436646679623429, guid: db09d30f58d407148b4384e1480a2b5c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1480,7 +1480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00edeaf6095c2b44b0030e4421d6c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   self: {fileID: 1792150583}
 --- !u!4 &1932900140 stripped
 Transform:
