@@ -1,43 +1,49 @@
 fileFormatVersion: 2
-guid: d8701952ccc361f4591a607c089871d6
+guid: db09d30f58d407148b4384e1480a2b5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1168926902407322946
-    second: buildings_0
+      213: 7238436646679623429
+    second: monster_roar_0
   - first:
-      213: 7643761922474946111
-    second: buildings_1
+      213: -336524953147894904
+    second: monster_roar_1
   - first:
-      213: -5308527982003062785
-    second: buildings_2
+      213: -3708159104487612132
+    second: monster_roar_2
   - first:
-      213: -8922806545422484088
-    second: buildings_3
+      213: 7720727119646593653
+    second: monster_roar_3
   - first:
-      213: -7916908332688520428
-    second: buildings_4
+      213: -303705455171022214
+    second: monster_roar_4
   - first:
-      213: 6625692385018236696
-    second: buildings_5
+      213: -22045743288127003
+    second: monster_roar_5
   - first:
-      213: 8255314341044953143
-    second: buildings_6
+      213: 7306049452796390758
+    second: monster_roar_6
   - first:
-      213: -7657187661756687099
-    second: buildings_7
+      213: 1383452891254999508
+    second: monster_roar_7
   - first:
-      213: 961677336216162819
-    second: buildings_8
+      213: -3381494205877480126
+    second: monster_roar_8
   - first:
-      213: -250298321781293072
-    second: buildings_9
+      213: -4709394566888996065
+    second: monster_roar_9
   - first:
-      213: 3247767813255465682
-    second: buildings_10
+      213: -8342532242333947883
+    second: monster_roar_10
   - first:
-      213: 1775660474302345089
-    second: buildings_11
+      213: 5701828985314778648
+    second: monster_roar_11
+  - first:
+      213: 1764135606481819177
+    second: monster_roar_12
+  - first:
+      213: 1742692131482479543
+    second: monster_roar_13
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -134,55 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buildings_0
+      name: monster_roar_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 352
-        width: 231
-        height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ca1fb86646ac3b4aa825916bed6c8bf
-      internalID: 1168926902407322946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_1
-      rect:
-        serializedVersion: 2
-        x: 735
-        y: 166
-        width: 62
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed0b79be075fdf54f88cf79973679852
-      internalID: 7643761922474946111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_2
-      rect:
-        serializedVersion: 2
-        x: 822
+        x: 0
         y: 0
-        width: 396
-        height: 426
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,41 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364df93a8cf27ff4792d31ba4ebe91a9
-      internalID: -5308527982003062785
+      spriteID: 3f3517a2f507b8b4d869573ccad13ac8
+      internalID: 7238436646679623429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_3
+      name: monster_roar_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 296
-        width: 98
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6dd5065ff3bc744c85562480df3207f
-      internalID: -8922806545422484088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_4
-      rect:
-        serializedVersion: 2
-        x: 3
+        x: 64
         y: 0
-        width: 246
-        height: 303
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,62 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d46872ce75f8f74a9d5a6abd2932b6b
-      internalID: -7916908332688520428
+      spriteID: 77bfc5df261b4b048a4c545939b293b4
+      internalID: -336524953147894904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_5
+      name: monster_roar_2
       rect:
         serializedVersion: 2
-        x: 198
-        y: 275
-        width: 268
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0125c41c3e2236041830574db773b80a
-      internalID: 6625692385018236696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_6
-      rect:
-        serializedVersion: 2
-        x: 483
-        y: 227
-        width: 116
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed5d71c233a2c594caf5ad4b6bb64dc5
-      internalID: 8255314341044953143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_7
-      rect:
-        serializedVersion: 2
-        x: 625
+        x: 128
         y: 0
-        width: 100
-        height: 332
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60241bad96e297148bc8cbda25afa6a1
-      internalID: -7657187661756687099
+      spriteID: a87ed73b06078434aabc0b9ae6e521bb
+      internalID: -3708159104487612132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_8
+      name: monster_roar_3
       rect:
         serializedVersion: 2
-        x: 266
+        x: 192
         y: 0
-        width: 194
-        height: 249
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a89d2f4be7e490c4eb8e629695538939
-      internalID: 961677336216162819
+      spriteID: 088469bfefcb6024e82af3ed9e2f2e15
+      internalID: 7720727119646593653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_9
+      name: monster_roar_4
       rect:
         serializedVersion: 2
-        x: 467
+        x: 256
         y: 0
-        width: 80
-        height: 181
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20b50bed1f430714b8e7e618e8d8bd5a
-      internalID: -250298321781293072
+      spriteID: bb9525cfa3fd319468097675e242782f
+      internalID: -303705455171022214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_10
+      name: monster_roar_5
       rect:
         serializedVersion: 2
-        x: 569
-        y: 3
-        width: 44
-        height: 194
+        x: 320
+        y: 0
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26f73e935850c448b24261aec41c4e6
-      internalID: 3247767813255465682
+      spriteID: 7ee3038113eb89b40aeb4e7bcd77f1a3
+      internalID: -22045743288127003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_11
+      name: monster_roar_6
       rect:
         serializedVersion: 2
-        x: 734
-        y: 8
-        width: 24
-        height: 108
+        x: 384
+        y: 0
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,8 +280,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f32c13b959ee894293b788851d55932
-      internalID: 1775660474302345089
+      spriteID: 143f5dba77b026140a74c901eb6bce30
+      internalID: 7306049452796390758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196e3bffcdde48c41b2c5e9d15b37000
+      internalID: 1383452891254999508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32961338abd6b3842b014351e7b5e051
+      internalID: -3381494205877480126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a36e1583a15fe4fa1d63becd55ad48
+      internalID: -4709394566888996065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533329dae91344649b8abade22808e90
+      internalID: -8342532242333947883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b68055f0684ffa48b6216f29e1f54c5
+      internalID: 5701828985314778648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d945923d221aa3428be725df45b8423
+      internalID: 1764135606481819177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_roar_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30611915516169446b9a0da708561895
+      internalID: 1742692131482479543
       vertices: []
       indices: 
       edges: []
