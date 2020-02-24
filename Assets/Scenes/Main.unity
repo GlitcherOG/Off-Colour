@@ -1553,6 +1553,7 @@ MonoBehaviour:
   - {fileID: 4861192715411706389, guid: d804bf24b95d34b41b5882d8c56ad200, type: 3}
   spawnCoolDown: 100
   objectCoolDown: 30
+  backgroundCoolDown: 20
   debug: 1
 --- !u!1001 &752947571756546173
 PrefabInstance:
@@ -3135,6 +3136,11 @@ PrefabInstance:
     - target: {fileID: 1670744268, guid: 64f3f4961029acc48800d6297689e234, type: 3}
       propertyPath: m_Size.y
       value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606274596471492891, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3838591819199594888, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}

@@ -18,7 +18,7 @@ public class PlayerHandler : MonoBehaviour
     public float Ghoster, Warper, Blaster, Stopper;
     public bool blasterAnimRunning;
     public bool CanCast;
-    public Animator anim;
+    public Animator anim, monster;
     public GameObject Ghost, Warp, Blast;
     // Start is called before the first frame update
     void Awake()
@@ -56,6 +56,11 @@ public class PlayerHandler : MonoBehaviour
             {
                 curHealth -= 1;
                 Stopper += 1;
+                monster.SetBool("Attack", true);
+            }
+            else
+            {
+                monster.SetBool("Attack", false);
             }
         }
         if (controller.transform.position.y <= -2)
