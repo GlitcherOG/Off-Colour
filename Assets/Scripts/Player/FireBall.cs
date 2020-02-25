@@ -7,6 +7,8 @@ public class FireBall : MonoBehaviour
     public float velX = 5f;
     public bool right;
     public Rigidbody2D rb;
+    public Animator anim;
+    public PlayerHandler player;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,14 @@ public class FireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.Ghoster >= 0)
+        {
+            anim.SetBool("Ghost", true);
+        }
+        else
+        {
+            anim.SetBool("Ghost", false);
+        }
         if (right == true)
         {
             rb.velocity = new Vector2(velX, 0);

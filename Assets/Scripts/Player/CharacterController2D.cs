@@ -24,7 +24,7 @@ public class CharacterController2D : MonoBehaviour
     public bool IsFacingRight { get; private set; } = true; //Is the character facing right
     public Rigidbody2D Rigidbody { get; private set; } //Character rigidbody
     public Animator Anim { get; private set; } //Character animatior
-    
+    public float Speed;
     [Header("Abilites")]
     public bool doubleJump = true;
     public bool airTesting;
@@ -42,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Awake()
     {
+        Speed = 0;
         //Get rigidbody component and set into variable
         Rigidbody = GetComponent<Rigidbody2D>();
         //Get animator component and set into variable
@@ -51,6 +52,7 @@ public class CharacterController2D : MonoBehaviour
         //If OnLandEvent is null, Set it to equal a new unity event
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
+
     }
     private void OnDrawGizmos()
     {
@@ -214,7 +216,7 @@ public class CharacterController2D : MonoBehaviour
                 }
             }
             //
-            Vector3 targetVelocity = new Vector2(offsetX*2, Rigidbody.velocity.y);
+            Vector3 targetVelocity = new Vector2(offsetX*(Speed + 1), Rigidbody.velocity.y);
             //New Vector3 velocity
             Vector3 velocity = Vector3.zero;
             //Changes the rigidbody velocity 
