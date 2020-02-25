@@ -15,7 +15,7 @@ public class LevelGeneration : MonoBehaviour
     public bool debug;
     private void Start()
     {
-        for (int i = 0; i < 7; i++)
+        for (int i = -1; i < 7; i++)
         {
             GameObject plat = Instantiate(platform, new Vector3(Player.transform.position.x + 50 * i, 0f), transform.rotation) as GameObject;
         }
@@ -44,7 +44,7 @@ public class LevelGeneration : MonoBehaviour
 
     void SpawnGround()
     {
-        GameObject plat = Instantiate(platform, new Vector3(spawnCoolDown + 250, 0f), transform.rotation) as GameObject;
+        GameObject plat = Instantiate(platform, new Vector3(spawnCoolDown + 240, 0f), transform.rotation) as GameObject;
         spawnCoolDown += 50;
     }
 

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   y: 3
   cooldown: 5
+  rotationZ: 0
 --- !u!60 &2944774841503898876
 PolygonCollider2D:
   m_ObjectHideFlags: 0

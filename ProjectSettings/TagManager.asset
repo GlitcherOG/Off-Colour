@@ -4,12 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Spike
-  - DangerZone
-  - Undefined
   - Platform
   - Enemy
   - Blast
+  - Beer
+  - Potion
+  - Ghoster
+  - DangerZone
+  - Warper
   layers:
   - Default
   - TransparentFX
@@ -44,15 +46,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
+  - name: Background
     uniqueID: 2845615131
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ForeFront
+  - name: Play Area
     uniqueID: 648532275
     locked: 0
-  - name: 2
+  - name: Forefront
     uniqueID: 2538501261
     locked: 0

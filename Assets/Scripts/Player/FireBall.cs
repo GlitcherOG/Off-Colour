@@ -8,7 +8,6 @@ public class FireBall : MonoBehaviour
     public bool right;
     public Rigidbody2D rb;
     public Animator anim;
-    public PlayerHandler player;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +17,7 @@ public class FireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.Ghoster >= 0)
+        if (PlayerHandler.Instance.Ghoster >= 0)
         {
             anim.SetBool("Ghost", true);
         }

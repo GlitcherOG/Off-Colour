@@ -32,7 +32,17 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
+    //create a function to quite the game by unityEditor isPlaying false and calling a inbuilt function to make the application quit
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
+    }
 
-   
+
+
+
 
 }

@@ -25,6 +25,7 @@ public class PlayerHandler : MonoBehaviour
     public Slider healthBar;
     public Slider magicBar; //Move off as well
     public GameObject Ghost, Warp, Blast; //Move off this
+    public Animator canvas;
     
     // Start is called before the first frame update
     Vector2 prev;
@@ -87,6 +88,7 @@ public class PlayerHandler : MonoBehaviour
         }
         if (curHealth == 0)
         {
+            run = false;
             GameManager.isDead = true;
         }
         if (curMana >= 1 || Blaster >= 0)
@@ -116,8 +118,6 @@ public class PlayerHandler : MonoBehaviour
         UIElements();
         float temp = gameObject.transform.position.x / 10;
         ScoreManager.distance = (float)Math.Round(temp);
-        float speed = gameObject.transform.position.x / 1000;
-        controller.Speed = (float)Math.Round(speed) + 1;
     }
 
     void UIElements()
@@ -197,5 +197,46 @@ public class PlayerHandler : MonoBehaviour
     public void StartRunning()
     {
         run = true;
+    }
+
+    public void Damaged(float damage)
+    {
+        curHealth -= damage;
+        canvas.SetTrigger("Hurt");
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy" && Ghoster <= 0)
+        {
+            Damaged(1);
+        }
+        if (other.tag == "Beer")
+        {
+            if (curHealth != maxHealth)
+            {
+                curHealth += 1;
+            }
+            controller.Anim.SetTrigger("Heal");
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Potion")
+        {
+            if (curMana != maxMana)
+            {
+                curMana += 1;
+            }
+            controller.Anim.SetTrigger("Magic");
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Ghoster")
+        {
+            Ghoster += 10;
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Blast")
+        {
+            Blaster += 10;
+            Destroy(other.gameObject);
+        }
     }
 }

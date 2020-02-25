@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2229502559706542829}
   - component: {fileID: 2229502559706542828}
   - component: {fileID: 2229502559706542830}
+  - component: {fileID: 3706469130111785741}
   m_Layer: 9
   m_Name: BackGround (13)
   m_TagString: Untagged
@@ -96,3 +97,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   y: 8
   cooldown: 12
+  rotationZ: 0
+--- !u!60 &3706469130111785741
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229502559706542819}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.7, y: 13}
+    newSize: {x: 2.1, y: 12.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.45000002, y: -3.1000001}
+      - {x: 0.15, y: -3.2}
+      - {x: 0.45000002, y: -1.1}
+      - {x: 0.45000002, y: 1}
+      - {x: 0.05, y: 6.5}
+      - {x: -0.65000004, y: 6.5}
+      - {x: -0.75, y: 3.7}
+      - {x: -1.0500001, y: 3.8}
+      - {x: -1.35, y: 3.7}
+      - {x: -1.35, y: -6.5}
+      - {x: 1.35, y: -6.5}
+      - {x: 1.35, y: -5.9}
+      - {x: 0.65000004, y: -3.3}
