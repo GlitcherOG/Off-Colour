@@ -117,7 +117,7 @@ public class PlayerHandler : MonoBehaviour
         float temp = gameObject.transform.position.x / 10;
         ScoreManager.distance = (float)Math.Round(temp);
         float speed = gameObject.transform.position.x / 1000;
-        controller.Speed = (float)Math.Round(speed);
+        controller.Speed = (float)Math.Round(speed) + 1;
     }
 
     void UIElements()
