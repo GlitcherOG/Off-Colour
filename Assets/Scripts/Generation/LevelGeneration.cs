@@ -12,6 +12,7 @@ public class LevelGeneration : MonoBehaviour
     public float spawnCoolDown = 0f;
     public float objectCoolDown = 20f;
     public float backgroundCoolDown = 20f;
+    public float prevBack;
     public bool debug;
     private void Start()
     {
@@ -50,7 +51,13 @@ public class LevelGeneration : MonoBehaviour
 
     void BackGroundSpawn()
     {
-        GameObject back = Instantiate(backgroundObjects[Random.Range(0, backgroundObjects.Length)], new Vector3(backgroundCoolDown + 100, 0f), transform.rotation) as GameObject;
-        backgroundCoolDown += (float)Random.Range(7, 20);
+        int temp = Random.Range(0, backgroundObjects.Length);
+        while(temp==prevBack)
+        {
+            temp = Random.Range(0, backgroundObjects.Length);
+        }
+        GameObject back = Instantiate(backgroundObjects[temp], new Vector3(backgroundCoolDown + 100, 0f), transform.rotation) as GameObject;
+        prevBack = temp;
+        backgroundCoolDown += (float)Random.Range(6, 9);
     }
 }

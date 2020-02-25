@@ -134,8 +134,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1756466035
-  m_SortingLayer: 2
+  m_SortingLayerID: 648532275
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8204335442217980708, guid: ea2244189d9fa194b8d31d2141881a0b,
     type: 3}
@@ -165,24 +165,24 @@ MonoBehaviour:
   speed: 20
   jump: 40
   run: 0
-  Camera: {fileID: 0}
-  CameraLocation: {fileID: 8263664446681546617}
   maxHealth: 0
   curHealth: 0
   maxMana: 0
   curMana: 0
-  healthBar: {fileID: 0}
-  magicBar: {fileID: 0}
+  Camera: {fileID: 0}
+  CameraLocation: {fileID: 8263664446681546617}
   Ghoster: 0
   Warper: 0
   Blaster: 0
   Stopper: 0
   blasterAnimRunning: 0
   CanCast: 0
-  anim: {fileID: 8263664447316047921}
+  healthBar: {fileID: 0}
+  magicBar: {fileID: 0}
   Ghost: {fileID: 0}
   Warp: {fileID: 0}
   Blast: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &8263664447316047923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   rightBullet: {fileID: 132187597226680289, guid: 43bf7e1ccec28eb46a170e60326ca60a,
     type: 3}
   IsGrounded: 0
+  Speed: 0
   doubleJump: 1
   airTesting: 0
   glide: 0

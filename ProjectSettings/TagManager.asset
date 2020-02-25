@@ -10,8 +10,8 @@ TagManager:
   - Beer
   - Potion
   - Ghoster
-  - DangerZone
   - Warper
+  - Spike
   layers:
   - Default
   - TransparentFX
