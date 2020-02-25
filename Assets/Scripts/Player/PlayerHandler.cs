@@ -25,6 +25,7 @@ public class PlayerHandler : MonoBehaviour
     public Slider healthBar;
     public Slider magicBar; //Move off as well
     public GameObject Ghost, Warp, Blast; //Move off this
+    
     // Start is called before the first frame update
     Vector2 prev;
     float dis;
@@ -157,10 +158,12 @@ public class PlayerHandler : MonoBehaviour
         {
             Ghoster -= Time.deltaTime;
             Ghost.SetActive(true);
+            controller.Anim.SetBool("Ghost", true);
         }
         else
         {
             Ghost.SetActive(false);
+            controller.Anim.SetBool("Ghost", false);
         }
         if (Warper >= 0)
         {

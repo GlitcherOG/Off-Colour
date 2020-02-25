@@ -12,6 +12,7 @@ public class Potion : MonoBehaviour
 
         if (other.tag == "Player" && PlayerHandler.Instance.curMana != PlayerHandler.Instance.maxMana)
         {
+            PlayerHandler.Instance.controller.Anim.SetTrigger("Magic");
             PlayerHandler.Instance.curMana += 1;
             Destroy(self.gameObject);
         }

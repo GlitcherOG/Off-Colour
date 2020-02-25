@@ -11,6 +11,7 @@ public class BeerManager : MonoBehaviour
     {   
         if (other.tag == "Player" && PlayerHandler.Instance.curHealth != PlayerHandler.Instance.maxHealth)
         {
+            PlayerHandler.Instance.controller.Anim.SetTrigger("Heal");
             PlayerHandler.Instance.curHealth += 1;
             Destroy(self.gameObject);
         }

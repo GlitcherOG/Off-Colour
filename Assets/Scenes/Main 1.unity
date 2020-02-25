@@ -489,71 +489,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 165213616826935327, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731092266345067642, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922570059233088940, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Name
-      value: Warp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2206043741805014484, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2485203492368955968, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2711147938939086391, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Name
-      value: Blast
-      objectReference: {fileID: 0}
-    - target: {fileID: 4200198227377370497, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.9716981
-      objectReference: {fileID: 0}
-    - target: {fileID: 4200198227377370497, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9487807
-      objectReference: {fileID: 0}
-    - target: {fileID: 4200198227377370497, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.9487807
-      objectReference: {fileID: 0}
-    - target: {fileID: 4200198227377370497, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4523702459698837804, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Text
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089409501312342271, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089409501312342271, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5089409502979873384, guid: 754623e64bee9f7438a91ebc88575c35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,11 +608,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8487059065941185029, guid: 754623e64bee9f7438a91ebc88575c35,
-        type: 3}
-      propertyPath: m_Name
-      value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 8803597712692524089, guid: 754623e64bee9f7438a91ebc88575c35,
         type: 3}
