@@ -489,6 +489,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 165213616826935327, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165213616826935327, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019474409052281804, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761863496203848193, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761863496203848193, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761863496203848193, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5089409502979873384, guid: 754623e64bee9f7438a91ebc88575c35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -598,6 +628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131968375357051634, guid: 754623e64bee9f7438a91ebc88575c35,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7420573777949274610, guid: 754623e64bee9f7438a91ebc88575c35,
         type: 3}
