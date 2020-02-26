@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 399fe548ac631d647966c905d73a1b45
+guid: 5c5c7afcfffe67a4cadb1a2e1fc12131
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 923876849398031535
-    second: player_run_spell_start_0
+      213: 645389262940596349
+    second: player_jump_reanimate_0
   - first:
-      213: -3129829462015497769
-    second: player_run_spell_start_1
+      213: -7971585909433108241
+    second: player_jump_reanimate_1
   - first:
-      213: 8557286273434551857
-    second: player_run_spell_start_2
+      213: 7248112803395735251
+    second: player_jump_reanimate_2
   - first:
-      213: 2208703521632400001
-    second: player_run_spell_start_3
+      213: -4573447811946625630
+    second: player_jump_reanimate_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_run_spell_start_0
+      name: player_jump_reanimate_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 768b513298cf3074482c01feafe414bc
-      internalID: 923876849398031535
+      spriteID: da0af67eadc3c2140855652c42bb8be4
+      internalID: 645389262940596349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_run_spell_start_1
+      name: player_jump_reanimate_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 78
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae51a28f612d7d49879e5298ac80323
-      internalID: -3129829462015497769
+      spriteID: 5761fd22800eb4e41ada37b355ebc6cd
+      internalID: -7971585909433108241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_run_spell_start_2
+      name: player_jump_reanimate_2
       rect:
         serializedVersion: 2
-        x: 152
+        x: 156
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 241a3f7acf81bea439c6a4228bab6383
-      internalID: 8557286273434551857
+      spriteID: d124c475ccd5ee14bbedb36f7b1f5966
+      internalID: 7248112803395735251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_run_spell_start_3
+      name: player_jump_reanimate_3
       rect:
         serializedVersion: 2
-        x: 228
+        x: 234
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705af76a290fd6f46a4d4f7d4e6fc474
-      internalID: 2208703521632400001
+      spriteID: 2145982c2e164ce4497faf151df72d9e
+      internalID: -4573447811946625630
       vertices: []
       indices: 
       edges: []

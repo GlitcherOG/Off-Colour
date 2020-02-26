@@ -1715,6 +1715,7 @@ MonoBehaviour:
   spawnCoolDown: 100
   objectCoolDown: 30
   backgroundCoolDown: 20
+  prevBack: 0
   debug: 1
 --- !u!1001 &752947571756546173
 PrefabInstance:

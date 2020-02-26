@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 399fe548ac631d647966c905d73a1b45
+guid: ad88ed7c93e2fc7439dffa1faa778865
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 923876849398031535
-    second: player_run_spell_start_0
+      213: 4556509422101322139
+    second: player_fall_reanimate_0
   - first:
-      213: -3129829462015497769
-    second: player_run_spell_start_1
+      213: -158524380667978693
+    second: player_fall_reanimate_1
   - first:
-      213: 8557286273434551857
-    second: player_run_spell_start_2
+      213: 7503546419204913834
+    second: player_fall_reanimate_2
   - first:
-      213: 2208703521632400001
-    second: player_run_spell_start_3
+      213: 2141452761358097795
+    second: player_fall_reanimate_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_run_spell_start_0
+      name: player_fall_reanimate_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 768b513298cf3074482c01feafe414bc
-      internalID: 923876849398031535
+      spriteID: 185abe445531b8448bdc456e7761ec99
+      internalID: 4556509422101322139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_run_spell_start_1
+      name: player_fall_reanimate_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 78
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae51a28f612d7d49879e5298ac80323
-      internalID: -3129829462015497769
+      spriteID: e0bcbbbbf7770544088ec4005359b4f0
+      internalID: -158524380667978693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_run_spell_start_2
+      name: player_fall_reanimate_2
       rect:
         serializedVersion: 2
-        x: 152
+        x: 156
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 241a3f7acf81bea439c6a4228bab6383
-      internalID: 8557286273434551857
+      spriteID: b008e42c51f3f1b4aacc27f0a5e91e10
+      internalID: 7503546419204913834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_run_spell_start_3
+      name: player_fall_reanimate_3
       rect:
         serializedVersion: 2
-        x: 228
+        x: 234
         y: 0
-        width: 76
-        height: 73
+        width: 78
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705af76a290fd6f46a4d4f7d4e6fc474
-      internalID: 2208703521632400001
+      spriteID: ac73e85cb5c310040980dcee341474b7
+      internalID: 2141452761358097795
       vertices: []
       indices: 
       edges: []
