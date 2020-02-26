@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject _pauseMenu;
     public GameObject gameOver;
     public GameObject pause;
+    public ScoreManager score;
     public Text distance;
     public static bool isDead = false;
     public void Start()
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
             _pauseMenu.SetActive(true);
             gameOver.SetActive(true);
             pause.SetActive(false);
+            score.save();
         }
     }
     public void TogglePause()

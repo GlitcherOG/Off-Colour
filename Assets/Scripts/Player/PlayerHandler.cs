@@ -16,7 +16,7 @@ public class PlayerHandler : MonoBehaviour
     [Header("Camera Things")]
     public GameObject Camera;
     public GameObject CameraLocation;
-    public float Ghoster, Warper, Blaster, Stopper; //Check and Optimise
+    public float Ghoster, Warper, Blaster, Stopper, Monster; //Check and Optimise
     float stopperCooldown;
     [Header("Animation Things")]
     public bool blasterAnimRunning;
@@ -24,9 +24,9 @@ public class PlayerHandler : MonoBehaviour
     [Header("Objects")]
     public Slider healthBar;
     public Slider magicBar; //Move off as well
-    public GameObject Ghost, Warp, Blast; //Move off this
+    public GameObject Ghost, Warp, Blast, Roar; //Move off this
     public Animator canvas;
-    
+    public GameObject self;
     // Start is called before the first frame update
     Vector2 prev;
     float dis;
@@ -54,6 +54,7 @@ public class PlayerHandler : MonoBehaviour
         curMana = 3;
         Stopper = 3;
         stopperCooldown = 2;
+        Monster = 0;
     }
 
     // Update is called once per frame
@@ -61,6 +62,23 @@ public class PlayerHandler : MonoBehaviour
     {
         dis = Vector2.Distance(prev, transform.position);
         prev = transform.position;
+        Monster -= Time.deltaTime;
+        if (Monster <= 0)
+        {
+            if (Roar.activeSelf == false)
+            {
+                Roar.transform.localPosition = new Vector2(-1.21f, transform.position.y - 14f);
+            }
+            
+            Roar.SetActive(true);
+            
+        }
+        if (Monster <= -1)
+        {
+            Roar.SetActive(false);
+            Monster += UnityEngine.Random.Range(20f, 40f);
+        }
+        
         if (dis <= 0.4 && run)
         {
             if (Stopper <= 0)
@@ -209,6 +227,7 @@ public class PlayerHandler : MonoBehaviour
         if (other.tag == "Enemy" && Ghoster <= 0)
         {
             Damaged(1);
+            Destroy(other);
         }
         if (other.tag == "Beer")
         {
