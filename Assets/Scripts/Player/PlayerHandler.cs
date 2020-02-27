@@ -29,6 +29,7 @@ public class PlayerHandler : MonoBehaviour
     public GameObject self;
     // Start is called before the first frame update
     Vector2 prev;
+    public Animator gobble;
     float dis;
 
     void Awake()
@@ -83,7 +84,7 @@ public class PlayerHandler : MonoBehaviour
         {
             if (Stopper <= 0)
             {
-                if (stopperCooldown <= 0)
+                if (stopperCooldown <= 0 && GameManager.isDead == false)
                 {
                     curHealth -= 1;
                     stopperCooldown = 2;
@@ -108,6 +109,15 @@ public class PlayerHandler : MonoBehaviour
         {
             run = false;
             GameManager.isDead = true;
+            if (stopperCooldown >= 0)
+            {
+                controller.Anim.SetTrigger("Death");
+            }
+            else
+            {
+                gobble.SetTrigger("Death");
+                
+            }
         }
         if (curMana >= 1 || Blaster >= 0)
         {
