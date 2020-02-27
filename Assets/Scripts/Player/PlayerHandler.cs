@@ -56,6 +56,7 @@ public class PlayerHandler : MonoBehaviour
         Stopper = 3;
         stopperCooldown = 2;
         Monster = 0;
+        
     }
 
     // Update is called once per frame
@@ -108,14 +109,18 @@ public class PlayerHandler : MonoBehaviour
         if (curHealth == 0)
         {
             run = false;
-            GameManager.isDead = true;
-            if (stopperCooldown >= 0)
+            
+            if (stopperCooldown >= 0 && GameManager.isDead == false)
             {
                 controller.Anim.SetTrigger("Death");
+                GameManager.isDead = true;
             }
             else
             {
+                Roar.SetActive(true);
+                GameManager.isDead = true;
                 gobble.SetTrigger("Death");
+                controller.Anim.enabled = !controller.Anim.enabled;
                 
             }
         }

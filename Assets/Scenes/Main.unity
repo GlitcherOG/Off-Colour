@@ -7468,6 +7468,11 @@ PrefabInstance:
       propertyPath: self
       value: 
       objectReference: {fileID: 1670744267}
+    - target: {fileID: 8263664447316047922, guid: 64f3f4961029acc48800d6297689e234,
+        type: 3}
+      propertyPath: gobble
+      value: 
+      objectReference: {fileID: 1792150585}
     - target: {fileID: 8263664447316047923, guid: 64f3f4961029acc48800d6297689e234,
         type: 3}
       propertyPath: m_GroundRayLength
