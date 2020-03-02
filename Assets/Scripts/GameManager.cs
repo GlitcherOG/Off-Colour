@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !isDead)
         {
             TogglePause();
+            
         }
         if (isDead == true && !isDeadRun)
         {
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     }
     public void TogglePause()
     {
-        if (isPaused)
+        if (isPaused == true)
         {
             Time.timeScale = 1;
             _pauseMenu.SetActive(false);

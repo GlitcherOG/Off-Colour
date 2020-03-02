@@ -211,7 +211,7 @@ public class PlayerHandler : MonoBehaviour
         {
             Warp.SetActive(false);
         }
-        if (Time.timeScale != 1f && Warper <= 0)
+        if (Time.timeScale != 1f && Warper <= 0 && GameManager.Instance.isPaused == false)
         {
             Time.timeScale = 1f;
         }
