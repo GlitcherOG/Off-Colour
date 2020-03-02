@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac189d8fc5e0333479f9eececec69ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y: 4
+  y: 6.3
   cooldown: 45
   rotationZ: 0
 --- !u!68 &6388026122154616417

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6378430594144200059}
   - component: {fileID: 6378430594144200037}
   - component: {fileID: 4622344330973729357}
+  - component: {fileID: 3367433408987134531}
   m_Layer: 8
   m_Name: buildings_4
   m_TagString: Untagged
@@ -29,8 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 161.8283, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5378412909153767612}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac189d8fc5e0333479f9eececec69ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y: 15
+  y: 17
   cooldown: 45
   rotationZ: 0
 --- !u!68 &4622344330973729357
@@ -119,44 +119,13 @@ EdgeCollider2D:
   - {x: -11.869156, y: 2.4772758}
   - {x: 0.021316528, y: 14.540543}
   - {x: 12.192291, y: 2.5849876}
---- !u!1 &7084755383839099443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5378412909153767612}
-  - component: {fileID: 8866992703980098388}
-  m_Layer: 8
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5378412909153767612
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7084755383839099443}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6378430594144200058}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &8866992703980098388
+--- !u!68 &3367433408987134531
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7084755383839099443}
+  m_GameObject: {fileID: 6378430594144200038}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
