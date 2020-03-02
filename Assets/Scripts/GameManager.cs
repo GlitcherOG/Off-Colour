@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
             _pauseMenu.SetActive(true);
             gameOver.SetActive(true);
             pause.SetActive(false);
-            score.save();
         }
     }
     public void TogglePause()

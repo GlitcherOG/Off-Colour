@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     public Text score;
     public Text highscoreText;
     public ScoreHandler handle;
+    public InputField Name;
 
     private void Start()
     {
@@ -33,7 +34,10 @@ public class ScoreManager : MonoBehaviour
 
     public void save()
     {
-        handle.NewScore("Player", (int)distance);
+        if (GameManager.Instance.isDead)
+        {
+            handle.NewScore(Name.text, (int)distance);
+        }
     }
 
 }
