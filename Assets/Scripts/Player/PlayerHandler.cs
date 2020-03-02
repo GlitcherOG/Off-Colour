@@ -110,16 +110,17 @@ public class PlayerHandler : MonoBehaviour
         {
             run = false;
             
-            if (stopperCooldown >= 0 && GameManager.isDead == false)
+            if (Stopper >= 0 && GameManager.isDead == false)
             {
                 controller.Anim.SetTrigger("Death");
                 GameManager.isDead = true;
             }
-            else
+            else if (Stopper <= 0 && GameManager.isDead == false)
             {
                 Roar.SetActive(true);
                 GameManager.isDead = true;
-                gobble.SetTrigger("Death");
+                controller.Anim.SetTrigger("Eaten");
+                gobble.SetTrigger("Eaten");
                 controller.Anim.enabled = !controller.Anim.enabled;
                 
             }
