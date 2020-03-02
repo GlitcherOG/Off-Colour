@@ -85,7 +85,7 @@ public class PlayerHandler : MonoBehaviour
         {
             if (Stopper <= 0)
             {
-                if (stopperCooldown <= 0 && GameManager.isDead == false)
+                if (stopperCooldown <= 0 && GameManager.Instance.isDead == false)
                 {
                     Damaged(1);
                     stopperCooldown = 2;
@@ -110,18 +110,18 @@ public class PlayerHandler : MonoBehaviour
         {
             run = false;
             
-            if (Stopper >= 0 && GameManager.isDead == false)
+            if (Stopper >= 0 && GameManager.Instance.isDead == false)
             {
                 controller.Anim.SetTrigger("Death");
-                GameManager.isDead = true;
+                GameManager.Instance.isDead = true;
             }
-            else if (Stopper <= 0 && GameManager.isDead == false)
+            else if (Stopper <= 0 && GameManager.Instance.isDead == false)
             {
                 
                 Roar.SetActive(true);
                 controller.Anim.SetTrigger("Eaten");
                 gobble.SetTrigger("Death");
-                GameManager.isDead = true;
+                GameManager.Instance.isDead = true;
                
                 
             }

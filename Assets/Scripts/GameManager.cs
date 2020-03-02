@@ -6,6 +6,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleton
+    public static GameManager Instance = null;
+    //Make it so this script is accesable anywhere in the scene 
+    void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
     public bool gameEnded = false;
     public bool isPaused = false;
     public GameObject _pauseMenu;
@@ -13,10 +21,13 @@ public class GameManager : MonoBehaviour
     public GameObject pause;
     public ScoreManager score;
     public Text distance;
-    public static bool isDead = false;
+    public bool isDead = false;
     public void Start()
     {
         Time.timeScale = 1;
+        pause.SetActive(true);
+        gameOver.SetActive(false);
+        _pauseMenu.SetActive(false);
     }
     private void Update()
     {
