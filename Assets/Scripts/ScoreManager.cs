@@ -26,10 +26,15 @@ public class ScoreManager : MonoBehaviour
         {
             highscoreText.text = distance.ToString();
         }
+        else
+        {
+            highscoreText.text = handle.high[9].ToString();
+        }
     }
 
     public void save()
     {
         handle.NewScore("Player", (int)distance);
     }
+
 }
