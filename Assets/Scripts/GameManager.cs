@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public ScoreManager score;
     public Text distance;
     public bool isDead = false;
+    public bool isDeadRun = false;
     public void Start()
     {
         Time.timeScale = 1;
@@ -35,8 +36,9 @@ public class GameManager : MonoBehaviour
         {
             TogglePause();
         }
-        if (isDead == true)
+        if (isDead == true && !isDeadRun)
         {
+            isDeadRun = true;
             Time.timeScale = 0;
             isPaused = true;
             distance.text = ScoreManager.distance.ToString();

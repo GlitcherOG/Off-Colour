@@ -16,24 +16,20 @@ public class MenuManager : MonoBehaviour
     //Restarts current Level
     public void Restart()
     {
-        GameManager.Instance.isDead = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
     //Loads next level
     public void NextLevel()
     {
-        GameManager.Instance.isDead = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
     //Loads Previous Level
     public void Prevlevel()
     {
-        GameManager.Instance.isDead = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1, LoadSceneMode.Single);
     }
     public void ChangeLevel(int index)
     {
-        GameManager.Instance.isDead = false;
         SceneManager.LoadScene(index, LoadSceneMode.Single);
     }
     //create a function to quite the game by unityEditor isPlaying false and calling a inbuilt function to make the application quit

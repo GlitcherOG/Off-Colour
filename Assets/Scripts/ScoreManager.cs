@@ -14,22 +14,21 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-        if (highscore == 0)
-        {
-            highscore = handle.high[1].dis;
-        }
+        Invoke("LoadScore", 0.1f);
     }
     private void Update()
     {
         score.text = distance.ToString();
         if (distance >= highscore)
         {
-            highscoreText.text = distance.ToString();
+            highscore = distance;
         }
-        else
-        {
-            highscoreText.text = handle.high[9].ToString();
-        }
+        highscoreText.text = highscore.ToString();
+    }
+
+    public void LoadScore()
+    {
+        highscore = handle.high[handle.high.Length - 1].dis;
     }
 
     public void save()
