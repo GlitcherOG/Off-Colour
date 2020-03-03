@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public AudioSource danger;
+    public AudioSource danger, hurt;
     public static PlayerHandler Instance = null;
     [Header("Base Stats")]
     public CharacterController2D controller;
@@ -241,6 +241,7 @@ public class PlayerHandler : MonoBehaviour
     public void Damaged(float damage)
     {
         curHealth -= damage;
+        hurt.Play();
         canvas.SetTrigger("Hurt");
     }
     private void OnTriggerEnter2D(Collider2D other)
