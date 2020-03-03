@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
+    public AudioSource danger;
     public static PlayerHandler Instance = null;
     [Header("Base Stats")]
     public CharacterController2D controller;
@@ -67,8 +68,10 @@ public class PlayerHandler : MonoBehaviour
         Monster -= Time.deltaTime;
         if (Monster <= 0)
         {
+            
             if (Roar.activeSelf == false)
             {
+                danger.Play();
                 Roar.transform.localPosition = new Vector2(-1.21f, transform.position.y - 14f);
             }
             
@@ -77,6 +80,7 @@ public class PlayerHandler : MonoBehaviour
         }
         if (Monster <= -1)
         {
+            
             Roar.SetActive(false);
             Monster += UnityEngine.Random.Range(20f, 40f);
         }
