@@ -10,7 +10,8 @@ public class ScoreBoard : MonoBehaviour
     void Start()
     {
         //After 0.2 seconds invoke LoadScores
-        Invoke("LoadScores", 0.2f);
+        //Invoke("LoadScores", 0.2f);
+        LoadScores();
     }
 
     public void LoadScores()

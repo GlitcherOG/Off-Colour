@@ -7,7 +7,7 @@ using System;
 public class ScoreHandler : MonoBehaviour
 {
     public Scores[] high = new Scores[10]; //New Scores high
-    public void Start()
+    public void Awake()
     {
         //Load Data saved
         LoadData();
