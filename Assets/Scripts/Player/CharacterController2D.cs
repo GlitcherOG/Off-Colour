@@ -54,20 +54,6 @@ public class CharacterController2D : MonoBehaviour
             OnLandEvent = new UnityEvent();
 
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(m_GroundCheck.position, m_GroundedRadius);
-        Gizmos.DrawWireSphere(m_FrontCheck.position, m_FrontCheckRadius);
-        Ray groundRay = new Ray(transform.position, Vector3.down);
-        Gizmos.DrawLine(groundRay.origin, groundRay.origin + groundRay.direction * m_GroundRayLength);
-
-
-
-        //Gizmos.color = Color.red;
-        //Ray ladderRay = new Ray(m_LadderCheck.position, Vector3.up);
-        //Gizmos.DrawLine(ladderRay.origin, ladderRay.origin + ladderRay.direction * m_LadderRayLength);
-    }
 
     private void FixedUpdate()
     {

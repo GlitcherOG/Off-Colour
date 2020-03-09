@@ -9,14 +9,12 @@ public class ScoreBoard : MonoBehaviour
     public ScoreHandler high; //Script ScoreHandler
     void Start()
     {
-        //After 0.2 seconds invoke LoadScores
-        //Invoke("LoadScores", 0.2f);
         LoadScores();
     }
 
     public void LoadScores()
     {
-        //For every i till i while i is less than 8
+        //For every i till i while i is less than score placements
         for (int i = 0; i < scorePlacements.Length; i++)
         {
             //Change the scoreplacement texts in the location of i in the array
