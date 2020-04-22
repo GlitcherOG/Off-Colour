@@ -6,32 +6,32 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public AudioSource danger, hurt;
-    public static PlayerHandler Instance = null;
+    public AudioSource danger, hurt; //Audio sources for sounds
+    public static PlayerHandler Instance = null; //The main instance of the player Handler
     [Header("Base Stats")]
-    public CharacterController2D controller;
-    public float speed = 40f;
-    public float jump = 10f;
-    public bool run;
+    public CharacterController2D controller; //The character controller for the player
+    public float speed = 40f; //Speed of the player
+    public float jump = 10f; //Jump height
+    public bool run; // Bool if the player can run
     public float maxHealth, curHealth, maxMana, curMana; //Player Stats
     [Header("Camera Things")]
-    public GameObject Camera;
-    public GameObject CameraLocation;
+    public GameObject Camera; //The camera object
+    public GameObject CameraLocation; //The location of where the y position of the camera should be
     public float Ghoster, Warper, Blaster, Stopper, Monster; //Check and Optimise
-    float stopperCooldown;
+    float stopperCooldown; //Cooldown for how long the stopper goes
     [Header("Animation Things")]
-    public bool blasterAnimRunning;
-    public bool CanCast;
+    public bool blasterAnimRunning; //if the player is moving using the blaster
+    public bool CanCast; //If the player can cast
     [Header("Objects")]
-    public Slider healthBar;
-    public Slider magicBar; //Move off as well
-    public GameObject Ghost, Warp, Blast, Roar; //Move off this
-    public Animator canvas;
-    public GameObject self;
-    // Start is called before the first frame update
-    Vector2 prev;
-    public Animator gobble;
-    float dis;
+    public Slider healthBar; //Health bar of the player
+    public Slider magicBar; //The amount of mana that the player has
+    public GameObject Ghost, Warp, Blast, Roar; //The UI objects
+    public Animator canvas; //The animator for the hurt animations 
+    public GameObject self; //Self gameobject
+
+    Vector2 prev; //Used for calculating the distance
+    public Animator gobble; //Animation of the 
+    float dis; //Distance between the moster and player
 
     void Awake()
     {
@@ -47,6 +47,7 @@ public class PlayerHandler : MonoBehaviour
 
     void Start()
     {
+        //Sets all the values to there default values
         Ghoster = 0;
         Warper = 0;
         Blaster = 0;
@@ -63,24 +64,21 @@ public class PlayerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         dis = Vector2.Distance(prev, transform.position);
         prev = transform.position;
         Monster -= Time.deltaTime;
         if (Monster <= 0)
         {
-            
             if (Roar.activeSelf == false)
             {
                 danger.Play();
                 Roar.transform.localPosition = new Vector2(-1.21f, transform.position.y - 14f);
             }
-            
-            Roar.SetActive(true);
-            
+            Roar.SetActive(true);           
         }
         if (Monster <= -1)
         {
-            
             Roar.SetActive(false);
             Monster += UnityEngine.Random.Range(20f, 40f);
         }
@@ -121,13 +119,10 @@ public class PlayerHandler : MonoBehaviour
             }
             else if (Stopper <= 0 && GameManager.Instance.isDead == false)
             {
-                
                 Roar.SetActive(true);
                 controller.Anim.SetTrigger("Eaten");
                 gobble.SetTrigger("Death");
                 GameManager.Instance.isDead = true;
-               
-                
             }
         }
         if (curMana >= 1 || Blaster >= 0)
@@ -150,21 +145,23 @@ public class PlayerHandler : MonoBehaviour
         }
         CameraChecks();
         AblitiesCheck();
-        if(run)
+        if (run)
         {
             Movement();
         }
-        UIElements();
-        float temp = gameObject.transform.position.x / 10;
-        ScoreManager.distance = (float)Math.Round(temp);
+        UIElements(); //Update UI Elements
+        float temp = gameObject.transform.position.x / 10; //Take the distance of the character from x zero and divide it by 10 
+        ScoreManager.distance = (float)Math.Round(temp); //Round the value to a whole number and set into the score manager
     }
 
     void UIElements()
     {
+        //Update the healthbar value if its not correct
         if (healthBar.value != curHealth / maxHealth)
         {
             healthBar.value = curHealth / maxHealth;
         }
+        //Update the magic bar value if its not correct
         if (magicBar.value != curMana / maxMana)
         {
             magicBar.value = curMana / maxMana;

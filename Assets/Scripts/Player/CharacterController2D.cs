@@ -6,7 +6,7 @@ public class CharacterController2D : MonoBehaviour
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f; //Movement smoothing for the charactor
     [SerializeField] private bool m_AirControl = false; //Allow control for character in the air
     [SerializeField] private bool m_StickToSlopes = true; //Sitck to slopes to allow for easier controls
-    [SerializeField] private LayerMask m_WhatIsGround;                          
+    [SerializeField] private LayerMask m_WhatIsGround; //What layer is ground                        
     [SerializeField] private Transform m_GroundCheck = null; //Ground check gameobject
     [SerializeField] private Transform m_FrontCheck = null;  //Front check gameobject
     [SerializeField] private float m_GroundedRadius = .05f;//Radius for ground check               
@@ -18,17 +18,17 @@ public class CharacterController2D : MonoBehaviour
     
     [Header("Events")]
     public UnityEvent OnLandEvent; //Unity event for when the character lands
-    public GameObject leftBullet, rightBullet;
+    public GameObject leftBullet, rightBullet; //GameObjects for the left and right bullets
     public bool IsGrounded; //Is the character grounded
     public bool IsFrontBlocked { get; private set; } //Is the front of the character blocked
     public bool IsFacingRight { get; private set; } = true; //Is the character facing right
     public Rigidbody2D Rigidbody { get; private set; } //Character rigidbody
     public Animator Anim { get; private set; } //Character animatior
-    public float Speed;
+    public float Speed; //The speed float
     [Header("Abilites")]
-    public bool doubleJump = true;
-    public bool airTesting;
-    public bool glide = false;
+    public bool doubleJump = true; //Double jump bool
+    public bool airTesting; //Air testing for if the player is in the air and has double jumped
+    public bool glide = false; //s
     public bool HasParameter(string paramName, Animator animator)
     {
         foreach (AnimatorControllerParameter param in animator.parameters)
@@ -42,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Awake()
     {
+        //Set speed to 0
         Speed = 0;
         //Get rigidbody component and set into variable
         Rigidbody = GetComponent<Rigidbody2D>();

@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class ObjectDelete : MonoBehaviour
 {
-    public PlayerHandler player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //If the tag of the player doesnt equal player
         if(collision.gameObject.tag != "Player")
         {
-        Destroy(collision.gameObject);
+            //Destory the gameobject
+            Destroy(collision.gameObject);
         }
         else
         {
-            player.curHealth -= 3;
+            //Damage the player
+            PlayerHandler.Instance.Damaged(3);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag != "Player")
+        //If the tag of the player doesnt equal player
+        if (collision.gameObject.tag != "Player")
         {
-        Destroy(collision.gameObject);
+            //Destory the gameobject
+            Destroy(collision.gameObject);
         }
         else
         {
-            player.curHealth -= 3;
+            //Damage the player
+            PlayerHandler.Instance.Damaged(3);
         }
     }
 }

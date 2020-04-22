@@ -9,6 +9,7 @@ public class ScoreBoard : MonoBehaviour
     public ScoreHandler high; //Script ScoreHandler
     void Start()
     {
+        //Load the scores
         LoadScores();
     }
 
